@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var d=new Date()
+    console.log(d)
+
+    var d2=new Date('12/03/2016 11:10:30')
+    console.log(d2)
+
+    // 几日
+    console.log('date='+d.getDate())
+    // 周几 0-6
+    console.log('day='+d.getDay())
+    // 月份 0-11
+    console.log('mounth='+d.getMonth())
+    // 年份
+    console.log('FullYear='+d.getFullYear())
+
+    // 时间戳 1970-1-1
+    console.log('time='+d.getTime())
+    console.log(d.getTime()/1000/60/60/24/365)
+
+    var d3=new Date('1/1/1970 0:0:0')
+    time=d3.getTime()
+    console.log(time)
+    console.log(time/1000/60/60)
+
+    time=Date.now()
+    for (let i = 0; i < 100; i++) {
+        console.log(i)
+    }
+    time1=Date.now()
+    console.log(time1-time)
+</script>
+</body>
+</html>

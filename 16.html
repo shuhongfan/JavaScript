@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var reg=new RegExp('a','i')
+    var str='a'
+    console.log(reg.test('A'))
+
+    reg=/[a[bdn]c/
+    console.log(reg.test('c'))
+
+    reg=/[^ab]/
+    console.log(reg.test('ab'))
+
+    var str='1a2b3c4d5e6f'
+    console.log(str.split('3'))
+    console.log(str.split(/[a-z]/))
+    console.log(str.match(/[a-z]/ig))
+    console.log(str.replace(/[a-z]/gi,''))
+
+    str='hello ac hello abc'
+    console.log(str.search(/a[bef]c/))
+
+    console.log(str.replace(/a/gi,'@_@'))
+</script>
+</body>
+</html>

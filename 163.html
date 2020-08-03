@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<textarea id="msg" name="" id="" cols="30" rows="10"></textarea>
+<button>提交</button>
+<div></div>
+<script>
+    var str='andy和red'
+    var newStr=str.replace(/andy/,'baby')
+    console.log(newStr)
+
+    var msg=document.querySelector('#msg')
+    var button=document.querySelector('button')
+    var div=document.querySelector('div')
+    button.onclick=function () {
+        div.innerText=msg.value.replace(/激情|gay/g,'**')
+    }
+</script>
+</body>
+</html>

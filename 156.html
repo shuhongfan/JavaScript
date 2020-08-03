@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul class="nav">
+    <li>榴莲</li>
+    <li>苹果</li>
+    <li>香蕉</li>
+    <li>西瓜</li>
+</ul>
+<script>
+    var lis=document.querySelector('.nav').querySelectorAll('li')
+    // for (let i = 0; i <lis.length; i++) {
+    //     lis[i].index=i
+    //     lis[i].onclick=function () {
+    //         console.log(this.index)
+    //     }
+    // }
+    // for (let i = 0; i <lis.length; i++) {
+    //     (function (i) {
+    //         console.log(i)
+    //         lis[i].onclick=function () {
+    //             console.log(i)
+    //         }
+    //     })(i)
+    // }
+    for (let i = 0; i <lis.length; i++) {
+        (function (i) {
+            setTimeout(function () {
+                console.log(lis[i].innerText)
+            },3000)
+        })(i)
+
+    }
+</script>
+</body>
+</html>

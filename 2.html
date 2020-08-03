@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Person(name,age,gender) {
+        this.name=name
+        this.age=age
+        this.gender=gender
+        this.sayName=fun
+    }
+    function fun() {
+        alert('hello 大家好，我是 '+this.name)
+    }
+    function Dog() {
+
+    }
+    var per=new Person('孙悟空',18,'male')
+    var per1=new Person('孙悟空1',128,'1male')
+    var per2=new Person('孙悟空2',138,'2male')
+    console.log(per)
+    console.log(per1)
+    console.log(per2)
+
+    var dog=new Dog('旺财',999,'as')
+    console.log(dog)
+
+    console.log(per instanceof Person)
+    console.log(dog instanceof Person)
+</script>
+</body>
+</html>

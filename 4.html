@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Person(name,age,gender) {
+        this.name=name
+        this.age=age
+        this.gender=gender
+    }
+    Person.prototype.toString=function(){
+        return `Person{name='${this.name}',age='${this.age}',sex='${this.gender}'}`
+    }
+
+
+    var per=new Person('孙悟空',18,'男')
+    var per2=new Person('猪八戒',28,'女')
+
+    console.log(per)
+    console.log(per2)
+    console.log(per.toString())
+    console.log(per2.toString())
+    console.log(per.__proto__.__proto__.hasOwnProperty('toString'))
+</script>
+</body>
+</html>

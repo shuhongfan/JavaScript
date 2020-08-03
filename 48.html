@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #outer{
+            width: 520px;
+            height: 333px;
+            background-color:greenyellow;
+            margin: 100px auto;
+            padding: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        #imgList{
+            /*width: 2500px;*/
+            position: absolute;
+            left: 0;
+        }
+        #imgList li{
+            float: left;
+            margin: 0 10px;
+        }
+        #navdiv{
+            position: absolute;
+            bottom: 20px;
+            /*left: 50%;*/
+        }
+        #navdiv a{
+            float: left;
+            display: block;
+            width: 15px;
+            height: 15px;
+            margin: 0 5px;
+            background-color: red;
+            opacity: 0.5;
+        }
+        #navdiv a:hover{
+            background-color: #000000;
+        }
+    </style>
+    <script src="tool.js"></script>
+    <script>
+        window.onload=function () {
+            var timer
+            var index=0
+            var imgList=document.getElementById('imgList')
+            var navdiv=document.getElementById('navdiv')
+            var outer=document.getElementById('outer')
+            var imgArr=document.getElementsByTagName('img')
+            var allA=document.getElementsByTagName('a')
+
+            // 设置图片宽度
+            imgList.style.width=520*imgArr.length+'px'
+            console.log(imgList.style.width)
+            // 导航栏居中
+            navdiv.style.left=(outer.offsetWidth-navdiv.offsetWidth)/2+'px'
+            console.log(navdiv.style.left)
+
+            allA[index].style.backgroundColor='black'
+
+            for (let i = 0; i <allA.length ; i++) {
+                allA[i].num=i
+                allA[i].onclick=function () {
+                    clearInterval(timer)
+                    index=this.num
+                    // imgList.style.left=-520*i+'px'
+                    setA()
+                    move(imgList,'left',-520*index,100,function () {
+                        autoChange()
+                    })
+                }
+            }
+            function setA() {
+                if (index>=imgArr.length-1){
+                    index=0
+                    imgList.style.left=0+'px'
+                }
+                for (let i = 0; i <allA.length ; i++) {
+                    allA[i].style.backgroundColor=''
+                }
+                allA[index].style.background='black'
+            }
+            function autoChange() {
+                timer=setInterval(function () {
+                    index++
+                    index%=imgArr.length
+                    // imgList.style.left=-520*index+'px'
+                    move(imgList,'left',-520*index,100,function () {
+                        setA()
+                    })
+                },1000)
+            }
+            autoChange()
+        }
+    </script>
+</head>
+<body>
+<div id="outer">
+    <ul id="imgList">
+        <li>
+            <img src="img/1.jpg" alt="">
+        </li>
+        <li>
+            <img src="img/2.jpg" alt="">
+        </li>
+        <li>
+            <img src="img/3.jpg" alt="">
+        </li>
+        <li>
+            <img src="img/4.jpg" alt="">
+        </li>
+        <li>
+            <img src="img/5.jpg" alt="">
+        </li>
+        <li>
+            <img src="img/1.jpg" alt="">
+        </li>
+    </ul>
+    <div id="navdiv">
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+    </div>
+</div>
+</body>
+</html>

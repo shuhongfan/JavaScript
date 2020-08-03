@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        #box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+        }
+        #box2{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+我是一段文字
+<div id="box1"></div>
+<div id="box2"></div>
+<script>
+    var box1=document.getElementById('box1')
+    var box2=document.getElementById('box2')
+    drag(box1)
+    drag(box2)
+    function drag(obj) {
+        obj.onmousedown=function(event){
+            obj.setCapture&&obj.setCapture()
+            // alert('鼠标按下')
+            var ol=event.clientX-obj.offsetLeft
+            var ot=event.clientY-obj.offsetTop
+            document.onmousemove=function (event) {
+                var left=event.pageX-ol
+                var top=event.pageY-ot
+                obj.style.left=left+'px'
+                obj.style.top=top+'px'
+            }
+            document.onmouseup=function () {
+                document.onmousemove=null
+                document.onmouseup=null
+                obj.releaseCapture&&obj.releaseCapture()
+                // alert('鼠标松开了')
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var rg=/^[a-zA-Z0-9-_]{6,16}$/
+    console.log(rg.test('a'))
+    console.log(rg.test('aa'))
+    console.log(rg.test('8'))
+    console.log(rg.test('8475878'))
+    console.log(rg.test('andy-red'))
+    console.log(rg.test('andy_red'))
+    console.log(rg.test('andy007'))
+    console.log(rg.test('andy!007'))
+</script>
+</body>
+</html>

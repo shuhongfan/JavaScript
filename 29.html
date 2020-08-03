@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        #info{
+            width: 300px;
+            height: 300px;
+            overflow: auto;
+            background-color: #bfa;
+        }
+    </style>
+</head>
+<body>
+<h3>欢迎亲爱的用户注册</h3>
+<p id="info">
+    亲爱的用户 请仔细阅读以下协议 如果您不仔细阅读就别想注册
+    亲爱的用户 请仔细阅读以下协议 如果您不仔细阅读就别想注册
+    亲爱的用户 请仔细阅读以下协议 如果您不仔细阅读就别想注册
+    亲爱的用户 请仔细阅读以下协议 如果您不仔细阅读就别想注册
+    亲爱的用户 请仔细阅读以下协议 如果您不仔细阅读就别想注册
+    亲爱的用户 请仔细阅读以下协议 如果您不仔细阅读就别想注册
+    亲爱的用户 请仔细阅读以下协议 如果您不仔细阅读就别想注册
+    亲爱的用户 请仔细阅读以下协议 如果您不仔细阅读就别想注册
+    亲爱的用户 请仔细阅读以下协议 如果您不仔细阅读就别想注册
+    亲爱的用户 请仔细阅读以下协议 如果您不仔细阅读就别想注册
+    亲爱的用户 请仔细阅读以下协议 如果您不仔细阅读就别想注册
+    亲爱的用户 请仔细阅读以下协议 如果您不仔细阅读就别想注册
+    亲爱的用户 请仔细阅读以下协议 如果您不仔细阅读就别想注册
+    亲爱的用户 请仔细阅读以下协议 如果您不仔细阅读就别想注册
+    亲爱的用户 请仔细阅读以下协议 如果您不仔细阅读就别想注册
+    亲爱的用户 请仔细阅读以下协议 如果您不仔细阅读就别想注册
+    亲爱的用户 请仔细阅读以下协议 如果您不仔细阅读就别想注册
+    亲爱的用户 请仔细阅读以下协议 如果您不仔细阅读就别想注册
+    亲爱的用户 请仔细阅读以下协议 如果您不仔细阅读就别想注册
+</p>
+<input type="checkbox" disabled>我已仔细阅读协议
+<input type="submit" value="注册" disabled>
+</body>
+<script>
+    var info=document.getElementById('info')
+    var inputs=document.getElementsByTagName('input')
+    info.onscroll=function () {
+        console.log(this.clientHeight)
+        console.log(this.scrollHeight)
+        console.log(this.scrollTop)
+        if (this.clientHeight>=this.scrollHeight-this.scrollTop){
+            console.log('到底了')
+            inputs[0].disabled=false
+            inputs[1].disabled=false
+        }else{
+            inputs[0].disabled=true
+            inputs[1].disabled=true
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var age=100
+    var obj={
+        age:20,
+        say:()=>{
+            console.log(this.age)
+        }
+    }
+    obj.say()
+
+    function sum(...b){
+
+        console.log(b)
+    }
+    sum(10,20,30)
+
+    sum1=(...args)=>{
+        console.log(args)
+        var total=0
+        args.forEach(function(value, index, array){
+            total+=value
+        })
+        return total
+    }
+    console.log(sum1(10,20,30))
+
+    let students=['wangwu','zhangsan','lisi']
+    let [s1,...s2]=students
+    console.log(s1)
+    console.log(s2)
+
+</script>
+</body>
+</html>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script>
+        window.onload=function () {
+            var btn01=document.getElementById('btn01')
+            // btn01.onclick=function () {
+            //     alert(1)
+            // }
+            // btn01.onclick=function () {
+            //     alert(2)
+            // }
+            // btn01.addEventListener('click',function () {
+            //     alert(1)
+            // },false)
+            // btn01.addEventListener('click',function () {
+            //     alert(2)
+            // },false)
+            // btn01.addEventListener('click',function () {
+            //     alert(3)
+            // },false)
+
+            bind(btn01,'click',function () {
+                // alert('bind')
+                console.log(this)
+            })
+            function bind(obj,evevtStr,callback) {
+                if (obj.addEventListener){
+                    obj.addEventListener(evevtStr,callback,false)
+                }else {
+                    obj.attachEvent('on'+evevtStr,function () {
+                        callback.call(obj)
+                    })
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="btn01">hsdfhjds</div>
+</body>
+</html>

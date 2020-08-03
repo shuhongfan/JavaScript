@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var reg=/\./
+    reg=/\\/
+    reg=new RegExp('\\\\')
+    console.log(reg.test('\\'))
+
+    reg=/\w/
+    reg=/\W/
+    reg=/\Bchild\B/
+    console.log(reg.test('helo child'))
+
+    var str=prompt('请输入你的用户名：')
+    console.log(str.replace(/^\s*|\s*$/g,''))
+</script>
+</body>
+</html>

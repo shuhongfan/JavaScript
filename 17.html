@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var reg=/(ab){3}/
+    reg=/ab{3}c/
+    reg=/ab{1,3}c/
+    reg=/ab+c/
+    reg=/ab*c/
+    reg=/ab?c/
+    reg=/^b/
+    reg=/a$/
+    reg=/^a|a$/
+    console.log(reg.test('aabbca'))
+
+    var phoneStr='13437191068'
+    var phoneReg=/^1[3-9][0-9]{9}$/
+    console.log(phoneReg.test(phoneStr))
+</script>
+</body>
+</html>

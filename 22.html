@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #outer{
+            width: 500px;
+            margin: 50px auto;
+            padding: 10px;
+            background-color: greenyellow;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="outer">
+    <p id="info"></p>
+    <img src="img/1.jpg" alt="">
+    <button id="prev">上一张</button>
+    <button id="next">下一张</button>
+</div>
+<script>
+    var prev=document.getElementById('prev')
+    var next=document.getElementById('next')
+    var info=document.getElementById('info')
+    var img=document.getElementsByTagName('img')[0]
+    var imgArr=[['img/1.jpg'],['img/2.jpg'],['img/3.jpg'],['img/4.jpg'],['img/5.jpg']]
+    var i=1
+    prev.onclick=function () {
+        i<=1?i=5:i--
+        console.log(i)
+        img.src='img/'+i+'.jpg'
+        info.innerHTML='总共图片 '+imgArr.length+' 张，当前第 '+i+'张'
+    }
+    next.onclick=function () {
+        i>=5?i=1:i++
+        console.log(i)
+        img.src='img/'+i+'.jpg'
+        info.innerHTML='总共图片 5 张，当前第 '+i+' 张'
+    }
+</script>
+</body>
+</html>

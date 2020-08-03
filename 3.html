@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function MyClass() {
+
+    }
+    MyClass.prototype.a=123
+    MyClass.prototype.sayHello=function () {
+        alert('hello')
+    }
+
+    var mc=new MyClass()
+    var mc2=new MyClass()
+
+    console.log(mc.__proto__===MyClass.prototype)
+
+    console.log(MyClass.prototype.a)
+
+    mc.a='我是mc中的a'
+    console.log(mc.a)
+    console.log(mc2.a)
+
+    // console.log(mc.sayHello())
+
+    console.log('a' in mc)
+    console.log(mc.hasOwnProperty('a'))
+
+    console.log(mc.__proto__.hasOwnProperty('hasOwnProperty'))
+    console.log(mc.__proto__.__proto__.__proto__)
+</script>
+</body>
+</html>

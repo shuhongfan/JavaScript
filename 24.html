@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+    <div class="div33">
+        div33
+        <div>div</div>
+    </div>
+    <div class="div33"></div>
+    <div>div1</div>
+</body>
+<script>
+    var body=document.getElementsByTagName('body')[0]
+    console.log(body)
+
+    var body=document.body
+    console.log(body)
+
+    var html=document.documentElement
+    console.log(html)
+
+    var all=document.all
+    console.log(all.length)
+    for (let i = 0; i < all.length; i++) {
+        console.log(all[i])
+    }
+
+    all=document.getElementsByTagName('*')
+    console.log(all.length)
+
+    var div33=document.getElementsByClassName('div33')
+    console.log(div33)
+
+    var div=document.querySelector('.div33 div')
+    console.log(div)
+
+    var box1=document.querySelectorAll('.div33')
+    console.log(box1)
+</script>
+</html>

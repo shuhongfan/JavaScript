@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // * 0次或者多次 》=0
+    var rg=/^a*$/
+    console.log(rg.test(''))
+    console.log(rg.test('a'))
+    console.log(rg.test('aaa'))
+    console.log('***************')
+    // + 1次或多次 》=1
+    var rg1=/^a+$/
+    console.log(rg1.test(''))
+    console.log(rg1.test('a'))
+    console.log(rg1.test('aaa'))
+    console.log('***************')
+    // ？ 1||0
+    var rg2=/^a?$/
+    console.log(rg2.test(''))
+    console.log(rg2.test('a'))
+    console.log(rg2.test('aaa'))
+    console.log('***************')
+    // 重复3次
+    var rg3=/^a{3}$/
+    console.log(rg3.test(''))
+    console.log(rg3.test('a'))
+    console.log(rg3.test('aaa'))
+    console.log(rg3.test('aaaaaa'))
+    console.log('***************')
+
+    var rg4=/^a{3,}$/
+    console.log(rg4.test(''))
+    console.log(rg4.test('a'))
+    console.log(rg4.test('aaa'))
+    console.log(rg4.test('aaaaaa'))
+    console.log('***************')
+
+    var rg5=/^a{3,5}$/
+    console.log(rg5.test(''))
+    console.log(rg5.test('a'))
+    console.log(rg5.test('aaa'))
+    console.log(rg5.test('aaaaaa'))
+    console.log('***************')
+
+</script>
+</body>
+</html>

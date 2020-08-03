@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let ary=[1,2,3]
+    let [a,b,c,d,e,f]=ary
+    console.log(a)
+    console.log(b)
+    console.log(c)
+    console.log(d)
+    console.log(e)
+    console.log(f)
+
+    let person={name:'zhangsan',age:20}
+    let {name,age}=person
+    console.log(name)
+    console.log(age)
+
+    let {name:myName,age:myAge}=person
+    console.log(myName)
+    console.log(myAge)
+
+    sum=(num1,num2)=> num1+num2
+    console.log(sum(1,2))
+
+    fn=v=>v
+    console.log(fn(5))
+
+    const obj={name:'zhangsan'}
+    function fn1(){
+        console.log(this)
+        return ()=>{
+            console.log(this)
+        }
+    }
+
+    aa=fn1.call(obj)
+    aa()
+
+
+</script>
+</body>
+</html>

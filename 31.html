@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        #box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+        }
+        body{
+            height: 1020px;
+        }
+    </style>
+</head>
+<body>
+<div id="box1"></div>
+<script>
+    var box1=document.getElementById('box1')
+    document.onmousemove=function (event) {
+        var st=document.body.scrollTop||document.documentElement.scrollTop
+        var sl=document.body.scrollLeft||document.documentElement.scrollLeft
+        var left=event.pageX
+        var top=event.pageY
+        box1.style.left=left+st+'px'
+        box1.style.top=top+sl+'px'
+        console.log(left,top)
+    }
+</script>
+</body>
+</html>

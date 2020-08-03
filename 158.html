@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var rg=/[abc]/
+    console.log(rg.test('andy'))
+    console.log(rg.test('dell'))
+    console.log('************')
+    var rg1=/^[abc]$/
+    console.log(rg1.test('andy'))
+    console.log(rg1.test('dell'))
+    console.log(rg1.test('a'))
+    console.log('************')
+    var rg2=/^[a-z]$/
+    console.log(rg2.test('dd'))
+    console.log(rg2.test('d'))
+    console.log(rg2.test('D'))
+    console.log(rg2.test(2))
+    console.log('************')
+    var rg3=/^[a-zA-Z0-9_-]$/
+    console.log(rg3.test('a'))
+    console.log(rg3.test('B'))
+    console.log(rg3.test('-'))
+    console.log(rg3.test('_'))
+    console.log(rg3.test('!'))
+    console.log('************')
+    // 中括号里面^表示取反
+    var rg4=/^[^a-zA-Z0-9_-]$/
+    console.log(rg4.test('a'))
+    console.log(rg4.test('B'))
+    console.log(rg4.test('-'))
+    console.log(rg4.test('_'))
+    console.log(rg4.test('!'))
+    console.log('************')
+</script>
+</body>
+</html>

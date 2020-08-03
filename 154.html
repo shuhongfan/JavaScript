@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src=""></script>
+</head>
+<body>
+<script>
+    function fn(a,b,callback) {
+        console.log(a+b)
+        callback && callback()
+    }
+    fn(1,2,function () {
+        console.log('我是最后调用的')
+    })
+</script>
+</body>
+</html>
