@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr1 = [1,5,3]
+    var sum = 0
+    for (let arr1Key in arr1) {
+        sum += arr1[arr1Key]
+    }
+    // document.write(sum)
+
+    arr1.forEach(item => {
+        sum += item
+    })
+    document.write(sum)
+</script>
+</body>
+</html>
