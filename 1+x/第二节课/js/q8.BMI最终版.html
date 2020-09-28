@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form>
+			<p>
+				<label>体重（千克）：</label><input type="number" id="weightIns" placeholder="请输入您的体重（千克）" step="0.1"/>
+			</p>
+			<p>
+				<label>身高（&nbsp;&nbsp;米&nbsp;）：</label><input type="number" id="heightIns" placeholder="请输入您的身高（米）" step="0.01"/>
+			</p>
+			
+			<button id="calBtn">计算BMI</button>
+			<p id="result"></p>
+			
+		</form>		<div>
+			<h1>BMI指数标准</h1>
+			<table border="1">
+				<tr>
+					<th>分类</th>
+					<th>BMI范围</th>
+				</tr>
+				<tr>
+					<td>偏轻</td>
+					<td>&lt;18.5</td>
+				</tr>
+				<tr>
+					<td>正常</td>
+					<td>18.5~24.9</td>
+				</tr>
+				<tr>
+					<td>超重</td>
+					<td>25~29.9</td>
+				</tr>
+				<tr>
+					<td>肥胖</td>
+					<td>&gt;=30</td>
+				</tr>
+			</dl>
+		</div>
+		<script src="./q8.js"></script>
+	</body>
+</html>

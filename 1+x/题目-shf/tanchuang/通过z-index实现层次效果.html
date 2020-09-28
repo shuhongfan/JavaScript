@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>通过z-index实现层次效果</title>
+		<style>
+			div {
+				height: 200px;
+				width: 200px;
+				position: absolute;
+				z-index: 0;
+			}
+			
+			.layer1 {
+				background-color: red;
+				z-index: 1;
+				top: 40px;
+			}
+			
+			.layer2 {
+				background-color: orange;
+				z-index: 2;
+				top: 80px;
+			}
+			
+			.layer3 {
+				background-color: yellow;
+				z-index: 3;
+				top: 120px;
+			}
+			
+			.layer4 {
+				background-color: green;
+				z-index: 4;
+				top: 160px;
+			}
+			
+			.layer5 {
+				background-color: blue;
+				z-index: 5;
+				top: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="layer1">第一层</div>
+		<div class="layer2">第二层</div>
+		<div class="layer3">第三层</div>
+		<div class="layer4">第四层</div>
+		<div class="layer5">第五层</div>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../jquery-3.4.1.min.js"></script>
+		<style>
+			li {
+				float: left;
+				display: inline-block;
+				height: 40px;
+				width: 40px;
+				border: 1px solid black;
+				margin-left: -1px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<script>
+			$('li:nth-child(3n+0)').css('background', 'black')
+		</script>
+	</body>
+</html>

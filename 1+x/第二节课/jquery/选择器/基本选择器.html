@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="jquery-3.4.1.min.js"></script>
+		<style>
+			/* p {
+				background-color: #FFC0CB;
+			} */
+		</style>
+	</head>
+	<body>
+		<div id="byDiv">第1个div元素，id值为byDiv</div>
+		<p>第1个p元素</p>
+		<p class="byClass">第2个p元素，类名为byClass</p>
+		<div class="byClass">第2个div元素，类名为byClass</div>
+		
+		<script>
+			$(function(){
+				//开始写jquery代码
+			//基本选择器
+				//id选择器 #id
+				//$('#byDiv').css('border', '1px solid black');
+				
+				//类选择器 .class
+				//$('.byClass').css('backgroundColor', '#FFC0CB');
+				
+				//元素选择器 元素的标签名字，比如div，p，h
+				//$('p').css('color', 'blue');
+				
+				//通配符选择器
+				//$('*').css('font-size', '30px');
+				
+				//组选择器
+				$('#byDiv, .byClass').css('border', '1px solid black');
+			
+			})
+		</script>
+	</body>
+</html>

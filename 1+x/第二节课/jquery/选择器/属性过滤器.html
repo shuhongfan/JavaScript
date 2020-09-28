@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>属性过滤选择器</title>
+    <style>
+        div {
+            width: 200px;
+            margin: 5px;
+            border: solid 1px black;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+  </head>
+  <body>
+    <div class="dv">title class=dv</div>
+    <div title="标题">title=标题</div>
+    <div class="dv1" title="标题1">class=dv1 title=标题1</div>
+    <div class="dv1" title="标题2">class=dv1 title=标题2</div>
+    <script>
+		//获取包含给定属性的元素
+		// $('div[title]').css('color', 'red');
+		//获取等于给定的属性是某个特定值的元素
+		//$('div[title="标题"]').css('color', 'red');
+		//获取不等于给定的属性是某个特定值的元素
+		 //$('div[title!="标题"]').css('color', 'red');
+		//获取给定的属性是以某些值开始的元素
+		//$('div[title^="标题"]').css('color', 'red');
+		// $('[class^=d]').css('background', 'yellow');
+		// 获取给定的属性是以某些值结尾的元素
+		//$('div[title$="标题"]').css('color', 'red');
+		//获取给定的属性是以包含某些值的元素
+		//$('div[title*="标题"]').css('color', 'red');
+		//获取满足多个条件的复合属A性的元素
+		//$('[class=dv1][title*=2]').css('background', 'yellow');
+    </script>
+  </body>
+</html>

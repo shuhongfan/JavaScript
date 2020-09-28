@@ -6,17 +6,45 @@
 </head>
 <body>
 
-你的体重(千克): <input type="text" id="weight"><br/>
-你的身高(米): <input type="number" id="height"><br>
+你的体重(千克): <input type="number" id="weight"><br/>
+你的身高(米): <input type="number" id="height" step="0.01"><br>
 <button onclick="handleBMI()">计算BMI</button>
 <h1 id="result"></h1>
-
+<div>
+    <h1>BMI指数标准</h1>
+    <table border="1">
+        <tr>
+            <th>分类</th>
+            <th>BMI范围</th>
+        </tr>
+        <tr>
+            <td>偏轻</td>
+            <td>&lt;18.5</td>
+        </tr>
+        <tr>
+            <td>正常</td>
+            <td>18.5~24.9</td>
+        </tr>
+        <tr>
+            <td>超重</td>
+            <td>25~29.9</td>
+        </tr>
+        <tr>
+            <td>肥胖</td>
+            <td>&gt;=30</td>
+        </tr>
+    </table>
+</div>
 <script src="2.js"></script>
 <script>
     function handleBMI () {
         var weight = document.getElementById('weight').value
         var height = document.getElementById('height').value
         console.log(weight,height)
+        if (weight===''||height===''){
+            alert('身高体重不正确')
+            return false
+        }
         callBMI(weight,height)
     }
 </script>

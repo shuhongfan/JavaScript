@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="jquery-3.4.1.min.js"></script>
+		
+	</head>
+	<body>
+		<p id="byDiv">这是div前面的p元素</p>
+		<div id="dv">
+		  <p>这是div中的第1个p元素</p>
+		  <ul>
+		    <li>这是第1个li元素</li>
+		    <li><p>这是第2个li中的p元素</p></li>
+		  </ul>
+		  <p>这是div中的第2个p元素</p>
+		</div>
+		<p class="byClass">这是div后面的第1个p元素</p>
+		<p>这是div后面的第2个p元素</p>
+		<p>这是div后面的第3个p元素</p>
+		<script>
+			$(function(){
+				//开始写jquery代码
+				
+			//层次选择器
+				//子选择器,下溯一层，只选择子元素，不关心子元素的子元素
+				// $('#dv > p').css('backgroundColor', 'red');
+				//$('#dv').children('p').css('backgroundColor', 'red')
+				
+				//后代选择器,查找#dv元素下所有的元素，不管是子元素还是孙子元素
+				//$('#dv p').css('backgroundColor', 'red');
+				//$('#dv').find('p').css('backgroundColor', 'red');
+			
+				
+				//兄弟选择器
+				//#dv同辈的，紧邻#dv元素的下一个P元素
+				//$('#dv + p').css('backgroundColor', 'red');
+				//$('#dv').next('p').css('backgroundColor', 'red');
+				
+				//#dv同辈的，跟在#dv元素后面的所有的p元素
+				//$('#dv ~ p').css('backgroundColor', 'red');
+				//$('#dv').nextAll('p').css('backgroundColor', 'red');
+				
+				//#dv同辈的，所有的兄弟元素
+				$('#dv').siblings('p').css('backgroundColor', 'red');
+			})
+		</script>
+	</body>
+</html>

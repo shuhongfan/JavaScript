@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>子元素过滤选择器</title>
+    <script src="jquery-3.4.1.min.js"></script>
+  </head>
+  <body>
+    <ul>
+      <li>1.北京.0</li>
+      <li>2.上海.1</li>
+	  <li>3.武汉.2</li>
+	  <li>4.南京.3</li>
+	  <li>5.黄山.4</li>
+    </ul>
+    <ul>
+      <li>1.广州.5</li>
+      <li>2.深圳.6</li>
+    </ul>
+    <ul>
+      <li>1.天津.7</li>
+    </ul>
+    <ul>
+      <li>1.重庆.8</li>
+    </ul>
+    <script>
+		//获取每个父元素下的第一个子元素
+		//$('li:first-child').css('backgroundColor', 'red');
+		//获取每个父元素下的最后一个子元素
+		$('li:last-child').css('color', 'pink');
+		//获取每个仅有一个子元素的父元素下的子元素
+        //$('li:only-child').css('background', 'orange');
+		//获取每个元素下的特定元素索引号从1开始
+        //$('li:nth-child(even)').css('background', 'orange');
+        //$('li:nth-child(1)').css('background', 'orange');
+		//$('li:even').css('color', 'red');
+    </script>
+  </body>
+</html>

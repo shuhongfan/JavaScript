@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+</body>
+<script>
+    console.log($('p').get(0))
+    console.log($('p:first'))
+    console.log($('p').eq(0))
+
+    var x=1
+    var y=2
+    console.log(x++,++y)
+    console.log(2%4)
+    console.log(new Date().getTime())
+    console.log(new Date().getDay())
+
+    var str='aabbaaccaa'
+    console.log(str.lastIndexOf('a',8))
+    console.log(str.indexOf('a',6))
+    console.log(str.indexOf('a'))
+    console.log(str.lastIndexOf('a'))
+    console.log('22'<'3')
+</script>
+</html>

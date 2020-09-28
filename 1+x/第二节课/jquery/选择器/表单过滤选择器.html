@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>表单过滤选择器</title>
+    <script src="jquery-1.12.4.js"></script>
+  </head>
+  <body>
+    <form id="myForm">
+      昵称：<input type="text" value="text"><br>
+      密码：<input type="password" value="password"><br>
+      性别：<input type="radio"><span>男</span>
+            <input type="radio" checked="true"><span>女</span><br>
+      爱好：<input type="checkbox"><span>游泳</span>
+            <input type="checkbox" checked="true"><span>旅行</span><br>
+      照片1:<img src="img/1.jpg" width="100"><br>
+      照片2：<input type="image" src="img/1.jpg" width="150"><br>
+      说明：<textarea></textarea><br>
+	  附件：<input type='file'>
+	  <br />
+	  省份：<select>
+	  		  <option >湖北</option>
+	  		  <option selected="true">河南</option>
+	  		  <option>广州</option>
+	  </select>
+	  <br />
+	  描述：
+	  <input disabled="true" value="不可编辑">
+      <input type="reset" value="重置">
+      <input type="button" value="保存">
+      <input type="submit" value="提交">
+	  <button>我是button</button>
+    </form>
+    <script>
+		//获取表单中所有input|textarea|select|button元素
+		//console.info($(':input'));
+		//console.info($('input'));
+		//获取表单中所有input[type=text]的元素
+		//console.info($(':text'));
+		//获取表单中所有input[type=password]的元素
+		//console.info($(':password'));
+		//获取表单中所有input[type=radio]的元素
+		//console.info($(':radio'));
+		//获取表单中所有input[type=checkbox]的元素
+		//console.info($(':checkbox'));
+		//获取表单中所有input[type=submit]的元素
+		//console.info($(':submit'))
+		//获取表单中所有input[type=image]的元素
+		//console.info($(':image'))
+		//获取表单中所有input[type=reset]的元素
+		//console.info($(':reset'))
+		//获取所有input[type=button]的元素和button元素
+		// console.info($(':button'))
+		//获取表单中所有input[type=file]的元素
+		// console.info($(':file'))
+        // $('#myForm :button').hide();
+        // $('#myForm :image').hide();
+        //$('#myForm :input').hide();
+		
+		
+		//表单对象属性过滤选择器
+		//获取表单中所有属性为可用的元素
+		//console.info($(":enabled"));
+		//获取表单中所有属性为不可用的元素
+		//console.info($(":disabled"));
+		//获取表单中所有被选中的元素
+        //$(':checked').hide();
+		//获取表单中所有被选中option的元素
+		//console.info($(':selected'))
+    </script>
+  </body>
+</html>

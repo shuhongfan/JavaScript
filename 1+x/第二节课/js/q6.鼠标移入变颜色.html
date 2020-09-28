@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#box {
+				width: 200px;
+				height: 200px;
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box" >
+			
+		</div>
+		
+		<script>
+			//1.找到事件的发生目标
+			var boxObj = document.getElementById('box');
+			//2.事件的名称,鼠标移入（onmouseover），鼠标移出(onmouseout)
+			
+			//3.写的处理函数
+			//鼠标移入事件的处理函数
+			boxObj.onmouseover = function(){
+				//把boxObj元素对象的背景色修改为绿色
+				boxObj.style.backgroundColor =  'green';
+			}
+			//鼠标移出事件的处理函数
+			boxObj.onmouseout = function() {
+				//把boxObj元素对象的背景色修改为红色
+				boxObj.style.backgroundColor = 'red';
+			}
+		
+		</script>
+	</body>
+</html>

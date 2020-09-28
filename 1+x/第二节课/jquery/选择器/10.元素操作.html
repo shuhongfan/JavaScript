@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>操作DOM</title>
+		<script src="jquery-3.4.1.min.js"></script>
+	</head>
+	<body>
+		<div id="demo">Hi, Kitty!</div>
+		<div id="wa"></div>
+		<ul id="list">
+			<li>第一</li>
+			<li>第二</li>
+			<li>第三</li>
+		</ul>
+		<ul id="list_2">
+			<li>2第一</li>
+			<li>2第二</li>
+			<li>2第三</li>
+		</ul>
+		<script>
+			//创建节点,方法1
+			$('#wa').html('<p>节点P1</p>')
+			//创建节点，方法2
+			$('<p>节点P2</p>').appendTo($('#wa'));
+			
+			//插入节点，方法1
+			$('#wa').append($('<p>节点P3</p>'));
+			//插入节点，方法2
+			$('#wa').prepend($('<p>节点P4</p>'));
+			//插入节点，方法3
+			$('<p>节点P5</p>').prependTo($('#wa'));
+			//插入节点，方法4
+			$('#wa').before($('<p>节点6</p>'));
+			//插入节点，方法5
+			$('<p>节点7</p>').insertBefore($('#wa'));
+			//插入节点，方法6
+			$('#wa').after($('<p>节点8</p>'));
+			//插入节点，方法5
+			$('<p>节点9</p>').insertAfter($('#wa'));
+			
+			
+			//删除#wa的所有子节点,方法1
+			$('#wa').empty();
+			//删除#wa元素,方法2
+			$('#wa').remove();
+			//删除#wa元素，方法3
+			$('#wa').detach();
+			
+			//复制
+			$('#demo').after($('#demo').clone());
+			
+			//替换元素,方法1
+			$('#wa').replaceWith($('#demo').clone())
+			//替换元素，方法2
+			$('#demo').clone().replaceAll($('#wa'))
+			
+			//包裹元素
+			$('#list').wrap('<strong></strong>');
+			
+			$('#list').wrapInner('<strong></strong>');
+			
+			$('li').wrapAll('<strong></strong>');
+		</script>
+	</body>
+</html>

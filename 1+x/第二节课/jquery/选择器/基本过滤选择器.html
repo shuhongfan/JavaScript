@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>基本过滤选择器</title>
+    <script src="jquery-1.12.4.js"></script>
+	<style>
+		@keyframes myfirst
+		{
+		from {background: red;}
+		to {background: yellow;}
+		}
+		
+		@-moz-keyframes myfirst /* Firefox */
+		{
+		from {background: red;}
+		to {background: yellow;}
+		}
+		
+		@-webkit-keyframes myfirst /* Safari 和 Chrome */
+		{
+		from {background: red;}
+		to {background: yellow;}
+		}
+		
+		@-o-keyframes myfirst /* Opera */
+		{
+		from {background: red;}
+		to {background: yellow;}
+		}
+		
+		#byDiv
+		{
+			position: relative;
+			height: 50px;
+			width: 100px;
+			background-color: red;
+			animation: myfirst 5s;
+			-moz-animation: myfirst 5s;	/* Firefox */
+			-webkit-animation: myfirst 5s;	/* Safari 和 Chrome */
+			-o-animation: myfirst 5s;	/* Opera */
+		}
+	</style>
+  </head>
+  <body>
+	  <p>0.第一个p元素</p>
+	  <p>1.第二个p元素</p>
+	  
+    <ul style="width:200px">
+      <li>0.春天摇身一变</li>
+      <li>1.成为了有秘密的人</li>
+      <li class="byClass">2.枯萎是花瓣的秘密</li>
+      <li>3.凋零是叶子的秘密</li>
+    </ul>
+	<h1>h1一级标题</h1>
+	<h2>h2二级标题</h2>
+	<h3>h3三级标题</h3>
+	<div id="byDiv">我有animated</div>
+    <script>
+		
+		//获取第一个元素
+		//$('p:first').css('color','red');
+		//获取最后一个元素
+		//$('p:last').css('color','red');
+		//获取所有元素除了该选择器
+		//$('li:not(.byClass)').css('backgroundColor', 'pink');
+        // 索引值为偶数的li,索引从0开始
+		//$('li:even').css('color', 'red');
+        // 索引值为奇数的li，索引从0开始
+        //$('li:odd').css('border', 'solid 1px black');
+		//获取指定索引值的元素，索引从0开始
+		//$('p:eq(1)').css('color', 'red');
+		//获取所有大于索引值的元素，索引从0开始
+		//$('li:gt(1)').css('text-decoration', 'underline')
+		//获取所有小于索引值的元素,索引从0开始
+		//$('li:lt(1)').css('text-decoration', 'underline')
+		//获取标题类型的元素h1,h2,h3...,h6
+		//$(':header').css('color', 'red');
+		//获取执行动画效果的元素
+		//$("#byDiv").animate({left:'250px'});
+		//$(':animated').css('color', 'blue');
+		
+    </script>
+  </body>
+</html>

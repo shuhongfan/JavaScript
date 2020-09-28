@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="jquery-3.4.1.min.js"></script>
+		<style>
+			.big-link{
+				position: absolute;
+				margin-top: 100px;
+				font-size: 70px;
+				color: #06f;
+			}
+
+			.mask {
+				position: absolute;
+				top: 0;
+				background-color: #777;
+				left: 0;
+				opacity: 0.5;
+				width: 100%;
+				height: 100%;
+				display: none;
+			}
+
+			.reveal-modal {
+				width: 300px;
+				padding: 30px 40px;
+				border-radius: 5px;
+				-moz-border-radius: 5px;
+				-webkit-border-radius: 5px;
+				position: absolute;
+				top: 100px;
+				left: 50%;
+				margin-left: -300px;
+				background-color: lightblue;
+				box-shadow: 0 0 10px rgb(0,0,0,0.4);
+				-moz-box-shadow:0 0 10px rgb(0,0,0,0.4);
+				-webkit-box-shadow:0 0 10px rgb(0,0,0,0.4);
+				z-index: 101;
+				text-align: center;
+				display: none;
+			}
+
+			form {
+				line-height: 32px;
+			}
+
+			label {
+				display: inline-block;
+				width: 70px;
+			}
+
+			input[type="submit"], input[type="reset"] {
+				background-color: coral;
+				    /*line-height: ___(1)___; !*设置行高为28像素*!*/
+				    line-height: 28px; /*设置行高为28像素*/
+				    padding: 0;
+				    margin: 0;
+				    width: 80px;
+				    border: 0;
+				    /*___(2)____: 5px; !*设置圆角为5像素*!*/
+				    border-radius: 5px; /*设置圆角为5像素*/
+					margin-top: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="#" class="big-link" onclick="login()"><h3>登录</h3></a>
+		<div id="mask" class="mask"></div><!--遮罩层-->
+		<div id="myModal" class="reveal-modal">
+				<form>
+					<label>用户名:</label><input type="text" name="userName"/><br />
+					<label>密&nbsp;&nbsp;&nbsp;码:</label><input type="password" name="userName"/><br />
+					<input type="submit" value="登录"> <input type="reset" value="取消"/>
+				</form>
+		</div>
+		<script>
+			function login() {
+				// $('#mask').___(5)___(); //显示遮罩层
+				$('#mask').show(); //显示遮罩层
+				// $('#myModal').___(5)___();
+				$('#myModal').show();
+			}
+
+			$('input[type="reset"]').click(function(){
+				// $('#mask').___(6)___();//隐藏遮罩层
+				$('#mask').hide();//隐藏遮罩层
+				// $('#myModal').___(6)___();
+				$('#myModal').hide();
+			})
+
+			var x0, y0, left0, top0, xn, yn, x1, y1;
+			var start = false;
+			//实现拖动
+			$('#myModal').mousedown(function(e){
+				// x0 = e.___(3)___; //鼠标位置，x轴坐标
+				x0 = e.pageX; //鼠标位置，x轴坐标
+				y0 = e.pageY;
+				// left0 = parseInt($('#myModal').___(4)___('left')); //获取css样式left的值
+				left0 = parseInt($('#myModal').css('left')); //获取css样式left的值
+				// top0 = parseInt($("#myModal").___(4)___('top'));//获取css样式top的值
+				top0 = parseInt($("#myModal").css('top'));//获取css样式top的值
+				start = true;
+			})
+
+			$('#myModal').mouseup(function(){
+				start = false;
+			})
+
+			$(document).mousemove(function(e) {
+				if(start) {
+					// xn = e.___(3)___;//鼠标位置，x轴坐标
+					xn = e.pageX;//鼠标位置，x轴坐标
+					yn = e.pageY;
+
+					x1 = x0 - xn;
+					y1 = y0 - yn;
+
+					// $('#myModal').___(4)___('left', left0 - x1 );//设置css样式left的值
+					$('#myModal').css('left', left0 - x1 );//设置css样式left的值
+					// $('#myModal').___(4)___('top', top0 - y1 );//设置css样式top的值
+					$('#myModal').css('top', top0 - y1 );//设置css样式top的值
+				}
+			})
+		</script>
+	</body>
+</html>

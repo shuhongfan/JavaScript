@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="jquery-3.4.1.min.js"></script>
+	</head>
+	<body>
+		<ul>
+			<li>第一</li>
+			<li>第二</li>
+			<li>第三</li>
+			<li>第四</li>
+		</ul>
+		<script>
+			//遍历方法一
+			$('ul li').text('测试');
+			//遍历方法二
+			$('ul li').each(function(index, item) {
+				$(item).text('遍历二');
+			})
+		</script>
+	</body>
+</html>

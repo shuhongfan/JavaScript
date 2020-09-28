@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../jquery-3.4.1.min.js"></script>
+	</head>
+	<body>
+		<div id="dv">
+			<p>这是div中的第1个p元素</p>
+			<p>这是div中的第2个p元素</p>
+		</div>
+		
+		<script>
+			console.info($('p:last-child'))
+			
+			console.info($('p:nth-child(2)'))
+			
+			console.info($('p:eq(1)'))
+		</script>
+	</body>
+</html>

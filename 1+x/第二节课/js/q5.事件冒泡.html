@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#inner {
+				width: 100px;
+				height: 100px;
+				background: yellow;
+			}
+
+			#center {
+				width: 200px;
+				height: 200px;
+				background: green;
+			}
+
+			#outer {
+				width: 300px;
+				height: 300px;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="outer">
+			我是outer
+			<div id="center" class="centerClass">我是center
+				<!-- 内联方式绑定点击事件 -->
+				<div id="inner" onclick="innerClick()">我是inner</div>
+			</div>
+		</div>
+
+		<script>
+			//给inner增加点击事件
+			document.getElementById('inner').onclick = function(){
+				console.info('点击inner了');
+			}
+			// function innerClick(e){
+			// 	console.info('点击inner了');
+			// 	// e.stopPropagation();
+			// }
+
+
+			//给center增加点击事件
+			document.getElementById('center').onclick = function(event){
+				// return false
+				event.stopPropagation()
+				console.info('点击center了');
+			}
+
+			// document.getElementById('center').onclick = function(event){
+
+			// 	var obj = event.target || window.event.srcElement;
+
+			// 	// console.info(obj.nodeName)
+			// 	// console.info(obj.id)
+			// 	// console.info(obj.className)
+			// 	// console.info(obj.innerText)
+
+
+			// 	console.info('第二次处理函数点击center了');
+			// 	event.stopPropagation();
+			// }
+			//给outer增加点击事件
+			document.getElementById('outer').onclick = function(){
+				console.info('点击outer了');
+			}
+			//早期IE版本（IE6-8）
+			// document.getElementById('outer').attachEvent('onclick', function(){
+			// 	console.info('点击outer了');
+			// })
+
+			// document.getElementById('outer').addEventListener('click', function(){
+			// 	console.info('点击outer了');
+			// })
+			// function two(){
+			// 	console.info('另外一个事件');
+			// }
+			// document.getElementById('outer').addEventListener('click', two)
+			// //要移出的事件，处理函数不能是匿名函数
+			// document.getElementById('outer').removeEventListener('click', two)
+		</script>
+	</body>
+</html>

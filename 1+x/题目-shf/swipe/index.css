@@ -1,0 +1,81 @@
+.swipe-item {
+	width: 500px;
+	height: 300px;
+	float: left;
+	color: white;
+	font-size: 50px;
+	text-align: center;
+	line-height: 300px;
+}
+
+.red {
+	background: red;
+}
+
+.yellow {
+	background-color: yellow;
+}
+
+.blue {
+	background-color: royalblue;
+}
+
+.green {
+	background-color: limegreen;
+}
+
+.orange {
+	background-color: darkorange;
+}
+
+.wrapper-inner {
+	width: 2500px
+}
+
+body {
+	margin: 0px;
+}
+
+.wrapper-outer{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.next-contain, .prev-contain {
+	position: absolute;
+	top: 50%;
+	border-radius: 0;
+	width: 25px;
+	height: 35px;
+	line-height: 35px;
+	background-color: #d9d9d9;
+	background-color: rgba(0,0,0,.15);
+	margin-top: -20px;
+	font-size: 20px;
+	z-index: 2;
+	border: none;
+	outline: none;
+	font-size: 0;
+	
+}
+
+.next-contain {
+	right: 0;
+	border-top-left-radius: 18px;
+	border-bottom-left-radius: 18px;
+}
+
+.prev-contain {
+	left: 0;
+	border-top-right-radius: 18px;
+	border-bottom-right-radius: 18px;
+}
+.iconfont{
+	color: white;
+	line-height: 35px;
+	display: inline-block;
+}
+.icon-next {
+	margin-left: 6px;
+}

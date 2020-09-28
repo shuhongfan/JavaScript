@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>jQuery事件方法</title>
+    <script src="jquery-3.4.1.min.js"></script>
+  </head>
+  <body>
+	  <button id="btn">按钮</button>
+	  <script>
+		  // $('#btn').click(function(){
+		  // 	console.info('rrrr')
+		  // })
+	  	// $('#btn').click(function(){ //点击的处理函数
+	  	// 	alert('我被点击了')
+	  	// })
+		
+		
+		//绑定点击事件
+		$('#btn').click(function() {
+		    console.info('text2');
+		});
+		//添加多个事件,id选择器
+		$('#btn').click(function() {
+		    console.log('text1');
+		});
+		
+		
+		// var a=1;
+		// var a = 2;
+		// console.info(a);
+		// // //js的点击事件
+		// document.getElementById('btn').onclick = function(){
+		// 	alert('我是dom点击事件')
+		// }
+		// document.getElementById('btn').onclick = function(){
+		// 	console.info('text1');
+		// }
+		//手动触发点击事件
+		// $('#btn').click();
+		
+		
+	  </script>
+  </body>
+</html>
