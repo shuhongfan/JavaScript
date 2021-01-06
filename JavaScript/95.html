@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 10px solid red;
+            padding: 20px;
+            margin: 43px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+<div>
+    我是内容swsssssssssssssssssssssssssssssssssssss
+</div>
+<script>
+    var div=document.querySelector('div')
+    console.log(div.scrollHeight)
+    console.log(div.scrollWidth)
+    div.addEventListener('scroll',function () {
+        console.log(div.scrollTop)
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var obj={
+        id:1,
+        pname:'小米',
+        price:1999
+    }
+    obj.num=1000
+    obj.price=99
+    console.log(obj)
+
+    Object.defineProperty(obj,'num',{
+        value:1000
+    })
+    console.log(obj)
+
+    Object.defineProperty(obj,'price',{
+        value:2999
+    })
+    console.log(obj)
+
+    Object.defineProperty(obj,'id',{
+        // 不能修改属性值
+        writable:false
+    })
+    obj.id=2
+    console.log(obj)
+    delete obj.pname
+
+    Object.defineProperty(obj,'address',{
+        value:'湖北武汉洪山区',
+        writable:false,
+        enumerable:false
+    })
+    console.log(obj)
+    console.log(Object.keys(obj))
+
+
+    // var arr=Object.keys(obj)
+    // console.log(arr)
+    // arr.forEach(function (value, index, array) {
+    //     console.log(value)
+    // })
+</script>
+</body>
+</html>

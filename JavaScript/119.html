@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            display: none;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+<button>显示</button>
+<button>隐藏</button>
+<button>切换</button>
+<button>透明度</button>
+<button>动起来</button>
+<div>
+
+</div>
+<script>
+    $(function () {
+        $('button').eq(0).click(function () {
+            $('div').fadeIn(1000,function () {
+                alert('显示成功')
+            })
+        })
+        $('button').eq(1).click(function () {
+            $('div').fadeOut('fast')
+        })
+        $('button').eq(2).click(function () {
+            $('div').fadeToggle('fast')
+        })
+        $('button').eq(3).click(function () {
+            $('div').fadeTo(1000,0.5)
+        })
+
+        $('button').eq(4).click(function () {
+            $('div').animate({
+                'left':300,
+                top:500,
+                width:800
+            })
+        })
+    })
+</script>
+</body>
+</html>

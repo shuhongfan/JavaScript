@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var o={
+        name:'andy'
+    }
+    function fn(arr){
+        console.log(this)
+        console.log(arr)
+    }
+    fn.apply(o,['pink'])
+    // 调用函数 改变this指向
+    // 参数要传递数组、
+    var arr=[1,66,3,99,4]
+    var arr1=['red','pink']
+    var max=Math.max.apply(Math,arr)
+    var min=Math.min.apply(Math,arr)
+    console.log(max)
+    console.log(min)
+</script>
+</body>
+</html>

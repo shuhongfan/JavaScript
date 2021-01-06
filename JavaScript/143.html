@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 遍历数组
+    var arr=[1,2,3]
+    var sum=0
+    arr.forEach(function (value, index, array) {
+        console.log('数组元素'+value)
+        console.log('索引号'+index)
+        console.log('数组本身'+arr)
+        sum+=value
+    })
+    console.log(sum)
+
+    // 查找满足条件的元素 返回数组
+    var arr=[12,7,66,4,88,3]
+    var newArr=arr.filter(function (value,index,array) {
+        // return value>=20
+        return value%2==0
+    })
+    console.log(newArr)
+
+    // 查找元素是否存在 返回布尔值
+    var arr=[10,30,4]
+    var flag=arr.some(function (value, index, array) {
+        // return value>=20
+        return value<3
+    })
+    console.log(flag)
+    var arr1=['red','pink','blue']
+    var flag1=arr1.some(function (value, index, array) {
+        return value=='pink'
+    })
+    console.log(flag1)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<script>
+    var ul=document.querySelector('ul')
+    var lili=ul.children[0].cloneNode(true)
+    ul.appendChild(lili)
+
+    document.write('<a>sd</a>')
+
+    for (let i = 0; i <100; i++) {
+        ul.innerHTML+='<a>百度</a>'
+    }
+
+    for (let i = 0; i <100; i++) {
+        var span=document.createElement('span')
+        span.innerText='123'
+        ul.appendChild(span)
+    }
+</script>
+</body>
+</html>

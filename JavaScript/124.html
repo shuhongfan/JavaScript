@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<div>
+    <span>我是内容</span>
+</div>
+<input type="text" value="123">
+<script>
+    console.log($('div').html())
+    $('div').html('1453')
+    console.log($('div').text())
+    $('div').text('dsfsdfs')
+    console.log($('input').val())
+    $('input').val('sdfds')
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            var targetobj={
+                id:0,
+                msg:{
+                    age:18
+                }
+            }
+            var obj={
+                id:1,
+                name:'andy',
+                msg:{
+                    sex:'male'
+                }
+            }
+            $.extend(true,targetobj,obj)
+            console.log(targetobj)
+            console.log(obj)
+            targetobj.msg.age=20
+            console.log(targetobj)
+            console.log(obj)
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>

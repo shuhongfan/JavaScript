@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div>123</div>
+    <ul>
+        <li>abc1</li>
+        <li>abc2</li>
+        <li>abc3</li>
+    </ul>
+    <script>
+        var div=document.querySelector('div')
+        div.addEventListener('click',function (event) {
+            console.log(event.target)
+            console.log(this)
+        })
+
+        var ul=document.querySelector('ul')
+        ul.addEventListener('click',function (event) {
+            console.log(this)
+            console.log(event.target)
+            console.log(event.currentTarget)
+        })
+    </script>
+</body>
+</html>

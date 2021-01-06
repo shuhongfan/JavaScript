@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style></style>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<ul>
+    <li>我是原先的div</li>
+</ul>
+<div class="test">我是原先的div</div>
+<script>
+    $(function () {
+        var lia=$('<li>新创建的lia</li>')
+        var lib=$('<li>新创建的lib</li>')
+        // 内部添加
+        $('ul').append(lia)
+        $('ul').prepend(lib)
+        // 外部添加
+        var diva=$('<div>我是后妈生的a</div>')
+        var divb=$('<div>我是后妈生的b</div>')
+        $('.test').after(diva)
+        $('.test').before(divb)
+
+        // 移出、
+        // $('ul').remove()
+        // $('ul').empty()
+        $('ul').html('')
+    })
+</script>
+</body>
+</html>

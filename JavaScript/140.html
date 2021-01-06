@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    console.log(Array.prototype)
+    Array.prototype.sum=function () {
+        var sum=0
+        for (let i = 0; i <this.length ; i++) {
+            sum+=this[i]
+        }
+        return sum
+    }
+    var arr=[1,2,3]
+    console.log(arr.sum())
+    console.log(Array.prototype)
+    var arr1=new Array(11,22,33)
+    console.log(arr1.sum())
+
+    function fn(x,y) {
+        console.log('我想喝手磨咖啡')
+        console.log(this)
+        console.log(x+y)
+    }
+    var o={
+        name:'andy'
+    }
+    fn.call()
+    // 改变this指向
+    fn.call(o)
+    fn.call(o,2,1)
+</script>
+</body>
+</html>

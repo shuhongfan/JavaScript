@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        <li>dsds1</li>
+        <li id="nav">dsds2</li>
+        <li>dsds3</li>
+        <li>dsds4</li>
+        <li class="box">首页</li>
+        <li class="box">产品</li>
+    </ul>
+    <button id="btn">sfsdf</button>
+    <div>某个时间</div>
+    <script>
+        var lis=document.getElementsByTagName('li')
+        console.log(lis)
+        console.log(lis[0])
+        for (let i = 0; i <lis.length; i++) {
+            console.log(lis[i])
+        }
+
+        var ol=document.getElementsByTagName('ul')
+        console.log(ol[0].getElementsByTagName('li'))
+
+        console.log(document.getElementsByClassName('box'))
+
+        console.log(document.querySelector('.box'))
+        console.log(document.querySelectorAll('.box'))
+        console.log(document.querySelector('#nav'))
+        console.log(document.querySelector('li'))
+        console.log(document.querySelectorAll('li'))
+
+        var body=document.body
+        console.log(body)
+        var html=document.documentElement
+        console.log(html)
+
+        btn.onclick=function () {
+            alert('ssa')
+        }
+
+        var btn=document.querySelector('button')
+        var div=document.querySelector('div')
+        btn.onclick=function () {
+            div.innerText='2019-6-6'
+        }
+    </script>
+</body>
+</html>

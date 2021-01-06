@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+    var todoList=[
+        {
+        title:'我今天吃八个馒头',
+        done:false
+        },{
+        title:'我今天学习jq',
+        done:false
+        },
+    ]
+    // 对象转字符串
+    localStorage.setItem('todu',JSON.stringify(todoList))
+    var date=localStorage.getItem('todu')
+    // 字符串转对象
+    date=JSON.parse(date)
+    console.log(date[0].title)
+</script>
+</body>
+</html>

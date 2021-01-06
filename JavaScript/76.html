@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // document.onkeyup=function () {
+    //     alert('我弹起了')
+    // }
+    document.addEventListener('keyup',function (e) {
+        console.log('弹起')
+        console.log('up:'+e.keyCode)
+    })
+    document.addEventListener('keydown',function (e) {
+        console.log('按下')
+        console.log('down:'+e.keyCode)
+    })
+    document.addEventListener('keypress',function (e) {
+        console.log('按下 没有功能键')
+        console.log('press:'+e.keyCode)
+    })
+</script>
+
+</body>
+</html>

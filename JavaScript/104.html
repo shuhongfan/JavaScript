@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .bg{
+            background-color: pink ;
+        }
+    </style>
+</head>
+<body>
+<div class="one two"></div>
+<button>开关灯</button>
+<script>
+    var div=document.querySelector('div')
+    var button=document.querySelector('button')
+
+    console.log(div.classList)
+    console.log(div.classList[0])
+
+    div.classList.add('three')
+    console.log(div.classList)
+
+    div.classList.remove('one')
+    console.log(div.classList)
+
+    button.addEventListener('click',function () {
+        document.body.classList.toggle('bg')
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <script>
+        var arr=['red','green','blue']
+        var sum=0
+        // $('div').css('background','red')
+        $('div').each(function (i,doEle) {
+            console.log(i)
+            console.log(doEle)
+            $(doEle).css('background',arr[i])
+            sum+=parseFloat($(doEle).text())
+        })
+        console.log(sum)
+
+        $.each($('div'),function (i,ele) {
+            console.log(i)
+            console.log(ele)
+        })
+        $.each(arr,function (i,ele) {
+            console.log(i+'---'+ele)
+        })
+        $.each({name:'andy',age:18},function (i,ele) {
+            console.log(i+'---'+ele)
+        })
+    </script>
+</body>
+</html>

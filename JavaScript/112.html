@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <ol>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li class="item">我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+    </ol>
+    <ul>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+    </ul>
+    <div class="div1">div1</div>
+    <script>
+        $(function () {
+            $('ol .item').siblings('li').css('color','red')
+            $('ul li:eq(3)').css('color','blue')
+            $('ul li').eq(4).css('color','red')
+
+            console.log($('div:first').hasClass('div1'))
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>点击</button>
+<script>
+    var btn=document.querySelector('button')
+    btn.addEventListener('click',function () {
+        // 可以后退
+        // location.assign('http://baidu.com')
+        // 不能后退
+        // location.replace('http://baidu.com')
+        // 刷新
+        location.reload('http://baidu.com')
+
+    })
+</script>
+</body>
+</html>

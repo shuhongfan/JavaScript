@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <div>我是div</div>
+    <div class="nav">我是div .nav</div>
+    <p>我是p</p>
+    <ul>
+        <li>我是第1ul</li>
+        <li>我是第2ul</li>
+        <li>我是第3ul</li>
+    </ul>
+    <ol>
+        <li>我是第1 ol</li>
+        <li>我是第2 ol</li>
+        <li>我是第3 ol</li>
+        <li>我是第4 ol</li>
+        <li>我是第5 ol</li>
+        <li>我是第6 ol</li>
+        <li>我是第7 ol</li>
+    </ol>
+    <div class="yeye">
+        yeye
+        <div class="father">
+            father
+            <div class="son">son</div>
+        </div>
+    </div>
+    <div class="nav">
+        <p>我是菲菲</p>
+        <div>
+            <p>我是妹妹</p>
+            <span>sdf</span>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            console.log($('.nav'))
+            console.log($('ul li'))
+        })
+
+        $('ol li').css('background','pink')
+        $('ol li:odd').css('color','red')
+        $('ol li:even').css('color','purple')
+        $('ol li:first').css('color','blue')
+        $('ol li:last').css('color','yellow')
+        $('ol li:eq(3)').css('background','green')
+
+        $('.son').parent().css('background','green')
+        $('.nav').children('p').css('color','red')
+        $('.nav').find('p').css('background','purple')
+
+    </script>
+</body>
+</html>

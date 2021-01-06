@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fa52a220-03b2-4b59-95ec-dc4b0b83dbc1" name="默认的" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1X11wqFXI2LIM3xBAbDzVWvg6bW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\XAMPP\JavaScript" />
+      <recent name="F:\XAMPP\JavaScript\04-swiper插件的使用" />
+      <recent name="F:\XAMPP\JavaScript\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\XAMPP\JavaScript" />
+      <recent name="F:\XAMPP\JavaScript\09-电梯导航" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fa52a220-03b2-4b59-95ec-dc4b0b83dbc1" name="默认的" comment="" />
+      <created>1580199028671</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580199028671</updated>
+      <workItem from="1580199033797" duration="18345000" />
+      <workItem from="1580284558681" duration="8555000" />
+      <workItem from="1580307295085" duration="4457000" />
+      <workItem from="1580317703526" duration="4422000" />
+      <workItem from="1580367443724" duration="19552000" />
+      <workItem from="1580452264316" duration="7363000" />
+      <workItem from="1580467421667" duration="10311000" />
+      <workItem from="1580540796144" duration="11526000" />
+      <workItem from="1580572547255" duration="6039000" />
+      <workItem from="1580631153299" duration="10157000" />
+      <workItem from="1580710746339" duration="1072000" />
+      <workItem from="1580716359214" duration="10928000" />
+      <workItem from="1580745901281" duration="3009000" />
+      <workItem from="1580796315249" duration="13237000" />
+      <workItem from="1580888407740" duration="15947000" />
+      <workItem from="1580975074455" duration="14177000" />
+      <workItem from="1581057825661" duration="14759000" />
+      <workItem from="1581147418405" duration="14170000" />
+      <workItem from="1581231444462" duration="7920000" />
+      <workItem from="1581243423913" duration="8421000" />
+      <workItem from="1581317609025" duration="10689000" />
+      <workItem from="1581403780626" duration="17991000" />
+      <workItem from="1581490056935" duration="471000" />
+      <workItem from="1581490558024" duration="210000" />
+      <workItem from="1581490949141" duration="558000" />
+      <workItem from="1581491525571" duration="36000" />
+      <workItem from="1581491577340" duration="123000" />
+      <workItem from="1581491731300" duration="85000" />
+      <workItem from="1581491844225" duration="130000" />
+      <workItem from="1581492050583" duration="72000" />
+      <workItem from="1581492164733" duration="829000" />
+      <workItem from="1581493641830" duration="9354000" />
+      <workItem from="1581523995039" duration="3079000" />
+      <workItem from="1581577703092" duration="9130000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="399" y="51" key="SettingsEditor" timestamp="1581150272014">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state x="399" y="51" key="SettingsEditor/0.0.1549.831@0.0.1549.831" timestamp="1581150272014" />
+    <state x="804" y="193" width="672" height="677" key="run.anything.popup" timestamp="1580918332480">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state x="804" y="193" width="672" height="677" key="run.anything.popup/0.0.1549.831@0.0.1549.831" timestamp="1580918332480" />
+    <state x="809" y="152" width="672" height="678" key="search.everywhere.popup" timestamp="1581412481088">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state x="809" y="152" width="672" height="678" key="search.everywhere.popup/0.0.1549.831@0.0.1549.831" timestamp="1581412481088" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/28.js</url>
+          <line>68</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

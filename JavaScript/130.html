@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        .current{
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<ul>
+    <li>我们都是好孩子</li>
+    <li>我们都是好孩子</li>
+    <li>我们都是好孩子</li>
+    <li>我们都是好孩子</li>
+    <li>我们都是好孩子</li>
+</ul>
+<ol>
+
+</ol>
+
+<input type="text">
+<script>
+    $(function () {
+        $('div').on({
+            mouseenter:function () {
+                $(this).css('background','skyblue')
+            },
+            click:function () {
+                $(this).css('background','purple')
+            },
+            mouseleave:function () {
+                $(this).css('background','red')
+            }
+        })
+        // 解除事件
+        // $('div').off()
+        $('div').off('click')
+
+        // $('div').on('mouseenter mouseleave',function () {
+        //     console.log('aaa')
+        //     $(this).toggleClass('current')
+        // })
+
+
+        $('ul').on('click','li',function () {
+            alert('122')
+        })
+
+        $('ul').off('click','li')
+        $('ul').one('click','li',function () {
+            alert(111)
+        })
+
+        $('ol li').click(function () {
+            alert(111)
+        })
+        $('ol').on('click',function () {
+            alert(111)
+        })
+
+        var li='<li>我是后来创建的</li>'
+        $('ol').append(li)
+
+        $(document).on('click',function () {
+            console.log('点击了document')
+        })
+        $('div').on('click',function (event) {
+            alert('div')
+            console.log(event)
+            console.log('点击了div')
+            event.stopPropagation()
+        })
+        // 自动触发事件
+        // $('div').click()
+        // $('div').trigger('click')
+        $('div').triggerHandler('click')
+
+        $('input').on('focus',function () {
+            $(this).val('你好吗')
+        })
+        $('input').triggerHandler('focus')
+    })
+</script>
+</body>
+</html>

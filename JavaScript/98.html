@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            background-color: pink;
+        }
+        span{
+            display: block;
+            width: 150px;
+            height: 150px;
+            left: 100px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+<button class="btn500">sadasdas500</button>
+<button class="btn800">sadasdas800</button>
+<div></div>
+<span></span>
+
+<script>
+function animate(obj,target,callback) {
+    clearInterval(obj.timer)
+    obj.timer=setInterval(function () {
+        var step=(target-obj.offsetLeft)/10
+        step=step>0?Math.ceil(step):Math.floor(step)
+        if (obj.offsetLeft==target){
+            clearInterval(obj.timer)
+            if (callback){
+                callback()
+            }
+        }
+        obj.style.left=obj.offsetLeft+step+'px'
+    },30)
+}
+
+var div=document.querySelector('div')
+var span=document.querySelector('span')
+var btn500=document.querySelector('.btn500')
+var btn800=document.querySelector('.btn800')
+
+animate(div,300)
+btn500.addEventListener('click',function () {
+    animate(span,500)
+})
+btn800.addEventListener('click',function () {
+    animate(span,800,function () {
+        span.style.backgroundColor='green'
+    })
+})
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <img src="images/s.gif" alt="">
+    <div>早上好</div>
+    <script>
+        var img=document.querySelector('img')
+        var div=document.querySelector('div')
+        var data=new Date()
+        var h=data.getHours()
+        if(h<12){
+            img.src='images/s.gif'
+            div.innerHTML='亲，早上好'
+        }else if (h<18){
+            img.src='images/x.gif'
+            div.innerHTML='下午好'
+        }else {
+            img.src='images/w.gif'
+            div.innerHTML='晚上好'
+        }
+    </script>
+</body>
+</html>

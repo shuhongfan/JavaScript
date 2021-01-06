@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+用户名 <input type="checkbox" id="checkbox">
+<input type="text" value="" id="uname">
+<script>
+    var checkbox=document.querySelector('#checkbox')
+    var uname=document.querySelector('#uname')
+    if(localStorage.getItem('uname')){
+        uname.value=localStorage.getItem('uname')
+        checkbox.checked=true
+    }
+    checkbox.addEventListener('change',function () {
+        if (this.checked){
+            localStorage.setItem('uname',uname.value)
+        }else {
+            localStorage.removeItem('uname')
+        }
+    })
+</script>
+</body>
+</html>

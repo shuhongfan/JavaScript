@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        .back {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            right: 30px;
+            bottom: 100px;
+            display: none;
+        }
+
+        .container {
+            width: 900px;
+            height: 500px;
+            background-color: skyblue;
+            margin: 400px auto;
+        }
+    </style>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <div class="back">返回顶部</div>
+    <div class="container">
+    </div>
+    <script>
+        $(function () {
+            var boxtop=$('.container').offset().top
+            $(window).scroll(function () {
+                console.log($(document).scrollTop())
+                if ($(document).scrollTop()>=boxtop){
+                    $('.back').show()
+                }else {
+                    $('.back').hide()
+                }
+            })
+            $('.back').click(function () {
+                // $(window).scrollTop(0)
+                $('body,html').stop().animate({
+                    scrollTop:0
+                })
+            })
+        })
+    </script>
+</body>
+</html>

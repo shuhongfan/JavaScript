@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            color: #999999;
+        }
+    </style>
+</head>
+<body>
+<input type="text" value="用户名">
+<script>
+    var ipt=document.querySelector('input')
+    ipt.onfocus=function () {
+        this.style.color='black'
+        this.style.outline='none'
+        this.style.borderColor='pink'
+    }
+    ipt.onblur=function () {
+        if (ipt.value.length<=0){
+            this.value='用户名'
+        }
+        this.style.borderColor='#999999'
+        this.style.color='#999999'
+    }
+</script>
+</body>
+</html>

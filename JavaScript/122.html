@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<a href="http://www.baidu.com" title="百度"></a>
+<button>dsds</button>
+<input type="checkbox" checked>
+<div index="153" data-index="5454">我是div</div>
+<span>asa</span>
+
+<script>
+    console.log($('a').prop('href'))
+    $('a').prop('title','sfsddfs')
+
+    $('input').change(function () {
+        console.log($(this).prop('checked'))
+    })
+    console.log($('div').prop('index'))
+    console.log($('div').attr('index'))
+    console.log($('div').attr('index',94685468))
+    console.log($('div').attr('data-index'))
+    // 数据缓存
+    console.log($('span').data('uname','andy'))
+    console.log($('span').data('uname'))
+    console.log($('div').data('index'))
+</script>
+</body>
+</html>

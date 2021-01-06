@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+    </style>
+    <script>
+        // $(document).ready(function () {
+        //     $('div').hide()
+        // })
+        $(function () {
+            jQuery('div').hide()
+        })
+        jQuery(function () {
+            alert('aaa')
+        })
+
+        // $('video')[0].play()
+        $(function () {
+            $('video').get(0).play()
+        })
+
+    </script>
+</head>
+<body>
+
+    <div></div>
+    <video src="mov.mp4"></video>
+
+</body>
+</html>

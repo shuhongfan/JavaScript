@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Star(uname,age) {
+        // 实例成员
+        this.uname=uname
+        this.age=age
+        // this.sing=function () {
+        //     console.log('我会唱歌')
+        // }
+    }
+    // 原型对象
+    // Star.prototype.sing=function () {
+    //     console.log('我会唱歌')
+    // }
+    // Star.prototype.movie=function () {
+    //     console.log('我会演电影')
+    // }
+    var that
+    Star.prototype={
+        constructor:Star,
+        sing:function () {
+            console.log('我会唱歌')
+            that=this
+        },
+        movie:function () {
+            console.log('我会演电影')
+        },
+        sex:'女'
+    }
+    var ldh=new Star('刘德华',18)
+    var zxy=new Star('张学友',20)
+    console.log(ldh)
+    console.log(zxy)
+    ldh.sing()
+    console.log(that===this)
+    zxy.sing()
+    console.log(ldh.sing===zxy.sing)
+    // 静态成员
+    Star.sex='男'
+    Object.prototype.sexx='女'
+    console.log(Star.sex)
+    console.log(ldh.sex)
+
+    console.dir(Star)
+    console.log(ldh.__proto__===Star.prototype)
+    console.log(Star.prototype)
+    console.log(ldh.__proto__)
+    console.log(Star.prototype.__proto__==Object.prototype)
+    console.log(Object.prototype.__proto__)
+
+
+</script>
+</body>
+</html>

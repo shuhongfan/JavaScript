@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="ldh">刘德华</button>
+    <button id="zxy">张学友</button>
+    <img id="img" src="images/ldh.jpg" alt="ldh" title="ldh">
+    <script>
+        var ldh=document.getElementById('ldh')
+        var zxy=document.getElementById('zxy')
+        var img=document.getElementById('img')
+        zxy.onclick=function () {
+            img.src='images/zxy.jpg'
+            img.alt='zhangxueyou'
+            img.title='zhangxueyou'
+        }
+        ldh.onclick=function () {
+            img.src='images/ldh.jpg'
+            img.alt='liudehua'
+            img.title='liudehua'
+        }
+    </script>
+</body>
+</html>

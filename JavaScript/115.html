@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            transition: all .3s;
+        }
+        .current{
+            background-color: green;
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+<div>ferew</div>
+<script>
+    $(function () {
+        console.log($('div').css('width'))
+        // $('div').css({
+        //     width:400,
+        //     height:300,
+        //     background:'red'
+        // })
+
+        $('div').click(function () {
+            $(this).toggleClass('current')
+        })
+
+    })
+</script>
+</body>
+</html>

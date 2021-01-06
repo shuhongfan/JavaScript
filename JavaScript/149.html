@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var o={
+        name:'andy'
+    }
+    function fn(a,b){
+        console.log(this)
+        console.log(a+b)
+    }
+    // 调用函数 改变this指向
+    fn.call(o,2,5)
+    function Father(uname,age,sex) {
+        this.uname=uname
+        this.age=age
+        this.sex=sex
+    }
+    function Son(uname,age,sex) {
+        Father.call(this,uname,age,sex)
+    }
+    var son=new Son('刘德华',18,'male')
+    console.log(son)
+</script>
+</body>
+</html>

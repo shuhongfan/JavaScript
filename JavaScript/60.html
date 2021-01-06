@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="demo" index="1" data-list-name="andy" data-index="2" class="nav" getTime="20"></div>
+
+<div>我是div</div>
+<span>我是span</span>
+<ul>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+</ul>
+<div class="box">
+    <span class="erweima">X</span>
+</div>
+<script>
+    var div=document.getElementById('demo')
+    console.log(div.id)
+    console.log(div.index)
+    div.className='navs'
+    console.log(div.className)
+    // 获得自定义属性
+    console.log(div.getAttribute('id'))
+    console.log(div.getAttribute('index'))
+    div.setAttribute('index','2')
+    div.setAttribute('class','foo')
+    console.log(div.getAttribute('index'))
+    console.log(div.getAttribute('class'))
+    div.removeAttribute('index')
+    console.log(div.getAttribute('index'))
+
+    console.log(div.getAttribute('data-index'))
+    // h5新增自定义属性方法
+    console.log(div.dataset)
+    console.log(div.dataset.index)
+    console.log(div.dataset['listName'])
+
+    var box=document.querySelector('.box')
+    console.dir(box)
+
+    var erweima=document.querySelector('.erweima')
+    var box=document.querySelector('.box')
+    console.log(erweima.parentNode)
+
+    var ul=document.querySelector('ul')
+    var lis=ul.querySelectorAll('li')
+    console.log(ul.childNodes)
+    console.log(ul.childNodes[0].nodeType)
+    console.log(ul.children)
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: pink ;
+            padding: 10px;
+            border: 2px solid red;
+            margin: 23px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" style="width: 200px"></div>
+    <script>
+        var box=document.querySelector('.box')
+        // console.log(box.offsetWidth)
+        // console.log(box.style.width)
+        // box.offsetWidth='300px'
+
+        box.addEventListener('click',function (e) {
+            console.log(e.pageX)
+            console.log(e.pageY)
+            console.log(box.offsetLeft)
+            var x=e.pageX-this.offsetLeft
+            var y=e.pageY-this.offsetTop
+            this.innerHTML='('+x+','+y+')'
+        })
+    </script>
+</body>
+</html>
