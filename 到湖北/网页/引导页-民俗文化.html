@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>到湖北-民俗文化</title>
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<body>
+		<div id="container">
+			
+			
+			<div id="star">
+				<!--<h2>大湖北</h2>-->
+				<dl>
+					<dt><img src="images/mx1.png"/></dt>
+					<dd><a href="">武汉市</a></dd>
+				</dl>
+				<dl>
+					<dt><img src="images/mx2.png"/></dt>
+					<dd><a href="">荆门市</a></dd>
+				</dl>
+				<dl>
+					<dt><img src="images/mx3.png"/></dt>
+					<dd><a href="">宜昌市</a></dd>
+				</dl>
+				<dl>
+					<dt><img src="images/mx4.png"/></dt>
+					<dd><a href="">襄阳市</a></dd>
+				</dl>
+				<dl>
+					<dt><img src="images/mx5.png"/></dt>
+					<dd><a href="">黄梅县</a></dd>
+				</dl>
+				<dl>
+					<dt><img src="images/mx6.png"/></dt>
+					<dd><a href="">十堰市</a></dd>
+				</dl>
+			</div>
+			<div id="content">
+				<img src="images/q6.jpg" usemap="#planetmap"/>
+				<map name="planetmap">  
+				  <area shape="rect" coords="400,0,700,300" alt="Sun" href="江汉平原皮影戏.html">  
+				  <area shape="rect" coords="100,300,400,600" alt="Sun" href="汉剧.html">  
+				  <area shape="rect" coords="400,317,700,600" alt="Sun" href="index.html">  
+				  <area shape="rect" coords="700,300,1000,600" alt="Sun" href="太极拳.html">  
+				  <area shape="rect" coords="400,600,700,900" alt="Sun" href="黄梅戏.html">  
+				  
+				</map>  
+			</div>
+			<div id="links" class="clear">
+				<ul class="links_logo">
+					<li><a href=""><img src="images/code.jpg"width="100px"/></a></li>
+					<li><a href=""><img src="images/logo.png"width="100px"/></a></li>
+					<li><a href=""><img src="images/code.jpg"width="100px"/></a></li>
+				</ul>
+				<p class="clear">快乐星球小组 | 组长：舒洪凡 | 组员：赵佳乐  傅天江  吕琛杰  李泳蝶	  明燚  向艳成</p>
+			</div>
+			
+		</div>
+	</body>
+	<script src="js/new_file.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var local=['武汉市.html','荆门市.html','宜昌市.html','襄阳市.html','黄梅县.html','十堰市.html'];
+		$('#star>dl').click(function  () {
+			location.href=local[$(this).index()];
+		})
+		$('#banner .menu li a span').eq(1).css('background-color', 'green');
+	</script>
+</html>

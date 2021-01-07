@@ -1,0 +1,24 @@
+<MKM version="2.0" imageFileUrl="file:///C:/Users/shuhongfan/Desktop/%e8%ae%be%e8%ae%a1%e7%a8%bf/%e6%b1%89%e5%89%a7/%e6%b1%89%e5%89%a7.jpg">
+  <Marks>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="817192" offsetX="25" offsetY="10" x="474" y="78"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="65793" offsetX="25" offsetY="10" x="662" y="389"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="0" offsetX="25" offsetY="10" x="574" y="499"/>
+    <LengthMark direction="12" color="16711680" length="105" x="66" y="74"/>
+    <LengthMark direction="3" color="16711680" length="42" x="270" y="59"/>
+    <LengthMark direction="3" color="16711680" length="144" x="128" y="173"/>
+    <LengthMark direction="12" color="16711680" length="120" x="263" y="233"/>
+    <LengthMark direction="12" color="16711680" length="80" x="185" y="236"/>
+    <LengthMark direction="12" color="16711680" length="74" x="454" y="565"/>
+    <LengthMark direction="3" color="16711680" length="377" x="279" y="449"/>
+    <LengthMark direction="12" color="16711680" length="379" x="76" y="653"/>
+    <LengthMark direction="12" color="16711680" length="599" x="529" y="605"/>
+    <LengthMark direction="12" color="16711680" length="606" x="74" y="1032"/>
+    <LengthMark direction="12" color="16711680" length="61" x="682" y="1067"/>
+    <LengthMark direction="12" color="16711680" length="382" x="741" y="1010"/>
+    <LengthMark direction="3" color="16711680" length="379" x="1013" y="841"/>
+    <LengthMark direction="3" color="16711680" length="391" x="235" y="1169"/>
+    <LengthMark direction="12" color="16711680" length="331" x="79" y="1358"/>
+    <LengthMark direction="12" color="16711680" length="595" x="531" y="1341"/>
+    <LengthMark direction="12" color="16711680" length="124" x="404" y="1400"/>
+  </Marks>
+</MKM>

@@ -1,0 +1,211 @@
+.clear{
+	clear: both;
+}
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style-type: none;
+	color: black;
+}
+#container{
+	width: 1200px;
+	margin: 0 auto;
+}
+#banner{
+	height: 92px;
+	margin-top: 70px;
+	margin-left: 35px;
+	background: white;
+	z-index: 9999;
+}
+#banner .menu li{
+	float: left;
+}
+#banner .menu li a span{
+	display: block;
+	width: 75px;
+	height: 25px;
+	line-height: 25px;
+	margin-right: 100px;
+	text-align: center;
+	border: 1px solid black;
+}
+#banner .menu  li a .last{
+	margin-right: 0px;
+}
+#banner .menu  li.logo{
+	margin-top: -20px;
+}
+#banner .menu li.logo a{
+	border: none;
+}
+#banner .menu  li.logo img{
+	width: 120px;
+	height: 110px;
+	margin-left: -50px;
+	margin-top: -30px;
+	margin-right: 50px;
+}
+#banner .menu li a span:hover{
+	background: green;
+}
+#banner .menu>li>ul{
+	width: 75px;
+	display: none;
+	z-index: 999px;
+	position: absolute;
+	background-color: white;
+}
+#banner .menu>li>ul>li{
+	float: left;
+	width: 75px;
+	border: 1px solid black;
+	text-align: center;
+}
+#banner .menu>li>ul>li:hover{
+	background: green;
+}
+#banner .search img{
+	float: right;
+	width: 150px;
+	height:35px;
+	border-radius: 10px;
+	margin-top: -5px;
+}
+
+#fk{
+	width: 1200px;
+	height: 600px;
+	margin: 30px auto;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	margin-top: -40px;
+}
+#fk img{
+	width: 1200px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+
+#fk ul{
+	position: absolute;
+	left: 550px;
+	bottom: 23px;
+	
+}
+#fk ul li{
+	width: 12px;
+	height: 12px;
+	background: #DDDDDD;
+	list-style: none;
+	float: left;
+	margin-right: 8px;
+	border-radius: 50%;
+}
+
+
+#star{
+	margin-top: 20px;
+}
+#star h2{
+	text-align: center;
+}
+#star dl{
+	float: left;
+	text-align: center;
+	width: 200px;
+	margin-top: 10px;
+}
+#star dl dd{
+	text-align: center;
+}
+#star dl dt{
+	text-align: center;
+}
+
+
+
+
+#links{
+	padding-top: 20px;
+	margin-bottom: 40px;
+}
+#links p{
+	text-align: center;
+	padding-top: 20px;
+}
+#links ul.links_logo{
+	margin-left: 370px;
+	text-align: center;
+}
+#links ul.links_logo li{
+	float: left;
+	width: 150px;
+}
+#links ul.links_hd{
+	margin-left: 100px;
+	text-align: center;
+	padding-top: 20px;
+}
+#links ul.links_hd li{
+	float: left;
+	width: 200px;
+}
+
+
+
+
+@media only screen and (min-width: 100px) and (max-width: 640px) {
+	#container{
+		width: 500px;
+	}
+	#banner{
+		width: 300px;
+		margin-top: 0px;
+	}
+	#banner .menu li{
+		float: left;
+	}
+	#banner .menu li a span{
+		width: 200px;
+		height: 40px;
+	}
+	#banner .menu li:nth-child(4){
+		margin-top: -90px;
+	}
+	.search{
+		display: none;
+	}
+	.logo img{
+		clear: both;
+		padding-left: 300px;
+	}
+	#fk img{
+		width: 500px;
+	}
+	#fk ul{
+		left: 210px;
+		top: 260px;
+	}
+	#star{
+		width: 500px;
+	}
+	#star dl{
+		float: left;
+		height: 200px;
+		padding-left: 30px;
+	}
+	#content img{
+		width: 500px;
+	}
+	.links_logo{
+		width: 500px;
+	}
+	.links_logo li{
+		margin-left: -200px;
+	}
+}
