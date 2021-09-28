@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>编写四则运算</title>
+</head>
+<body>
+<input type="text" id="first">
+<select name="" id="util">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+</select>
+<input type="text" id="last">
+<input name="btn" id="btn" type="button" value="计算两数运算结果" onclick="account();" />
+<h1></h1>
+<script type="text/javascript">
+    function account()
+    {
+        let first = parseFloat(document.getElementById("first").value);
+        let last = parseFloat(document.getElementById("last").value);
+        let util = document.getElementById("util").value;
+        let res=0;
+        if (util=='+') res=first+last
+        else if (util=='-') res=first-last
+        else if (util=='*') res=first*last
+        else if (util=='/') res=(first/last).toFixed(2)
+        document.getElementsByTagName("h1")[0].innerHTML=first+util+last+'='+res;
+    }
+</script>
+</body>
+</html>

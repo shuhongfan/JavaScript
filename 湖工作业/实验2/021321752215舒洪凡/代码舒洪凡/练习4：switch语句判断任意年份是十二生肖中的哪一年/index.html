@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var year=2000;
+    while (year<=2030){
+        var x=(year-1900)%12;  //1900年为鼠年
+        switch (x){
+            case 0: document.write(year+"年是鼠年！"+"<br/>"); break;
+            case 1: document.write(year+"年是牛年！"+"<br/>"); break;
+            case 2: document.write(year+"年是虎年！"+"<br/>"); break;
+            case 3: document.write(year+"年是兔年！"+"<br/>"); break;
+            case 4: document.write(year+"年是龙年！"+"<br/>"); break;
+            case 5: document.write(year+"年是蛇年！"+"<br/>"); break;
+            case 6: document.write(year+"年是马年！"+"<br/>"); break;
+            case 7: document.write(year+"年是羊年！"+"<br/>"); break;
+            case 8: document.write(year+"年是猴年！"+"<br/>"); break;
+            case 9: document.write(year+"年是鸡年！"+"<br/>"); break;
+            case 10: document.write(year+"年是狗年！"+"<br/>"); break;
+            case 11: document.write(year+"年是猪年！"+"<br/>"); break;
+        }
+        year++;
+    }
+
+</script>
+</body>
+</html>

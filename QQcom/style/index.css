@@ -1,0 +1,44 @@
+.box{
+    width: 1400px;
+    margin: 0 auto;
+}
+.box .header img{
+    float: left;
+    width: 135px;
+    height: 38px;
+}
+.box .header .search{
+    margin-top:5px;
+    float: left;
+    margin-left: 320px;
+    width: 500px;
+    height: 35px;
+    background-color: #f3f6f8;
+    border-radius: 20px;
+}
+.box .header .search .search_type{
+    float: left;
+    width: 66px;
+    height: 35px;
+    line-height: 35px;
+    color: #CCCCCC;
+    text-align: center;
+}
+.box .header .search .search_right{
+    float: right;
+    width: 110px;
+    line-height: 35px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: #1479d7;
+    text-align: center;
+    color: #fff;
+}
+.box .header .rightLink{
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+}
+.box .header .rightLink img{
+    background: url("../img/icons.png");
+}

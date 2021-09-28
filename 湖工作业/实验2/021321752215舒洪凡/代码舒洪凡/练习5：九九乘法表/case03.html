@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>九九乘法表</title>
+    <style>
+      table{border-collapse:collapse;}
+      table td{border:1px solid #ccc;padding:3px 6px;}
+    </style>
+  </head>
+  <body>
+    <div id="table"></div>
+    <script>
+      var str = '<table>';
+      for (let i = 1; i < 10; i++) {
+        str+="<tr>"
+        for (let j = 1; j <= i; j++) {
+          str+="<td>"+j+' * '+i+" = "+i*j+"</td>"
+        }
+        str+="</tr>"
+      }
+      str += '</table>';
+      // 将拼接后的字符串显示到页面中
+      document.getElementById('table').innerHTML = str;
+    </script>
+  </body>
+</html>
