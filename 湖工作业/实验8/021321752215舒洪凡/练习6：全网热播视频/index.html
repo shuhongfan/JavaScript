@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>全网热播视频</title>
+    <link rel="stylesheet" href="css/play.css">
+</head>
+<body>
+<section id="play">
+    <h1>全网热播视频</h1>
+    <ul>
+        <li><img src="images/flv01.jpg"><p>想见你</p><span>1</span></li>
+        <li><img src="images/flv02.jpg"><p>梨泰院Class</p><span>2</span></li>
+        <li>
+            <ol>
+                <li><span>3</span>白屋农场<p>加入看单</p></li>
+                <li><span>4</span>三生三世枕上书<p>加入看单</p></li>
+                <li><span>5</span>安家<p>加入看单</p></li>
+                <li><span>6</span>我的天才女友 第二季<p>加入看单</p></li>
+                <li><span>7</span>爱的迫降<p>加入看单</p></li>
+                <li><span>8</span>完美关系<p>加入看单</p></li>
+                <li><span>9</span>爱情公寓5<p>加入看单</p></li>
+                <li><span>10</span>请回答1988<p>加入看单</p></li>
+            </ol>
+        </li>
+    </ul>
+</section>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+	$(document).ready(function(){
+    $("#play ul>li:not(li:last)").css("margin-right","10px");
+    $("#play ul>li:last").css("background","#f0f0f0");
+    $("#play ul>li>span").css("background","#f0a30f");
+    $("#play ol>li>span:first").css("background","#f0a30f");
+    $("#play ol>li>span:not(:first)").css("background","#a4a3a3");
+    $("#play ol>li:lt(5)").css("background","url(images/orange.jpg) right -4px no-repeat");
+    $("#play ol>li:eq(1)").css("background","url(images/green.jpg) right -4px no-repeat");
+    $("#play ol>li:gt(4)").css("background","url(images/green.jpg) right -4px no-repeat");
+    $("#play ol>li").mousemove(function(){
+        $(this).find(":hidden").show();
+    })
+    $("#play ol>li").mouseout(function(){
+        $("#play ol>li p:visible").hide();
+    })
+});
+</script>
+</body>
+</html>

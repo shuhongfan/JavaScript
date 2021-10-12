@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>新闻列表内容</title>
+	 <link rel="stylesheet" href="css/games.css">
+ </head>
+ <body>
+	<div class="contain">
+		<h2>抗击新冠肺炎 </h2>
+		<ul>
+			<li> 微视频：战武汉</li>
+			<li> 让党旗在疫情防控斗争第一线高高飘扬 《胜利召唤》</li>
+			<li> 全国26省区市新增确诊病例为0</li>
+			<li> 任命第3天河南周口45岁副市长因公殉职</li>
+			<li> 李克强：现在看来最终战胜疫情的曙光就要出现了</li>
+			<li> 韩国超7成病例来自大邱 "新天地"信徒感染比例高</li>
+			<li> 中国银协：抗击疫情 各金融机构合计信贷超万亿</li>
+			<li> 中国-世卫报告:新冠病毒中间宿主不明</li>
+		</ul>
+	</div>
+	<script src="js/jquery-1.12.4.js"></script>
+	<script>
+		$(document).ready(function(){
+		    //用过滤选择器给h2设置背景颜色和字体颜色
+		    $(".contain :header").css({"background":"#2a65ba","color":"#ffffff"});
+		    //li 最后一个 没有边框
+		    $(".contain li:last").css("border","none");
+		    //改变第一个li的字体大小和颜色
+		    $(".contain li:first").css({"font-size":"16px","color":"#e90202"});
+		    //设置偶数行背景颜色
+		    $(".contain li:even").css("background","#f0f0f0");
+		    //设置奇数行背景颜色
+		    $(".contain li:odd").css("background","#cccccc");
+		    //设置前两个li的字体颜色（从0开始,小于2）
+		    $(".contain li:lt(2)").css({"color":"#708b02"});
+		    //设置后两个li的字体颜色（从0开始，大于3）
+		    $(".contain li:gt(3)").css({"color":"#b66302"});
+		    //改变第3个li的背景颜色（从0开始
+		    $(".contain li:eq(2)").css({"background":"#02acaa"});
+		});
+	</script>
+ </body>
+</html>

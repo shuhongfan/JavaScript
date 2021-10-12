@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title> 囧妈 (2020) </title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class='main'>
+			<div class='left'>
+				<img src="images/pic.gif" width="100%" />
+				<br/><br/>
+				<img src="images/col.gif" alt="收藏本片" />
+			</div>
+			<div class='right'>
+				<dl>
+					<dt>囧妈 (2020) </dt>
+					<dd><span id="star">主演：</span> 徐峥 / 袁泉 / 郭京飞 / 黄景瑜 / 贾冰 等</dd>
+					<dd><span id='director'>导演：</span><span title="导演">徐峥 </span></dd>
+					<dd><span id='label'>标签：</span><span>徐峥</span> 导演 <span>2020</span> 电影 </dd>
+					<dd><span id="drama">剧情：</span>虽然有着诸多不舍，但是强势的老板徐伊万（徐峥 饰）还是和合作伙伴兼妻子张璐（袁泉 饰）结束了失败的婚姻。由于某种心理作祟，他试图阻挠前妻在海外重新创业。为了第一时间赶去美国，他回到母亲卢小花（黄梅莹 饰）的住处取护照，结果阴差阳错和母亲坐上了开往俄罗斯的K3次列车......
+						<a href="#">点击了解更多 </a>
+					</dd>
+				</dl>
+				<img src="images/btn.gif" />
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('dt').click(function() {
+					$('dd span[id]').css({ "color": "#FF0099", "font-weight": "bold" });
+				});
+				$("#director").click(function() {
+					$("dd span[title]").css("font-weight", "bold");
+				});
+				$('#label').click(function() {
+					$("#label~span").css({ "background-color": "#E0F8EA",
+						"color": "#10A14B", "padding": "2px 8px" });
+				});
+				$("img[alt]").click(function() {
+					alert("您已收藏成功！");
+				});
+			});
+		</script>
+	</body>
+</html>
