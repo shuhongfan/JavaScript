@@ -18,6 +18,45 @@
         <input class="btn" value="发布" onclick="postSuccess()">
     </div>
 </div>
-<script src="js/bbs.js"></script>
+<script>
+    function post() {
+        document.getElementById("post").style.display = "block";
+    }
+    function postSuccess() {
+        let newLi = document.createElement("li");
+        let random = parseInt(Math.random()*4)+1;
+        let touDiv = document.createElement("div");
+        let touImg = document.createElement("img");
+        touImg.setAttribute("src","images/tou0"+random+".jpg")
+        touDiv.appendChild(touImg);
+
+        let titleH1 = document.createElement("h1");
+        let title = document.getElementById("title").value;
+        titleH1.innerHTML=title
+
+        let newP = document.createElement("p");
+        let newSpan = document.createElement("span");
+        let sec = document.getElementById("sec").value;
+        newSpan.innerHTML="板块”："+sec
+        let date = new Date();
+        let currentDate = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+"  "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+        let timeSpan = document.createElement("span");
+        timeSpan.innerHTML="发表时间："+currentDate
+        newP.appendChild(newSpan)
+        newP.appendChild(timeSpan)
+
+        newLi.appendChild(touDiv)
+        newLi.appendChild(titleH1)
+        newLi.appendChild(newP)
+
+        let postList = document.getElementById("postList");
+        console.log(postList)
+        postList.insertBefore(newLi,postList.firstChild)
+
+        document.getElementById("title").value=""
+        document.getElementById("content").value=""
+        document.getElementById("post").style.display = "none"
+    }
+</script>
 </body>
 </html>

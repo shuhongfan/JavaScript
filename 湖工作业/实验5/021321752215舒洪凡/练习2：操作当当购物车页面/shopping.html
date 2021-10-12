@@ -24,24 +24,116 @@
             <li><img src="images/dog.jpg"></li>
             <li>我和狗狗活下来了</li>
             <li>¥<input type="text" name="price" value="21.90"></li>
-            <li><input type="button" name="minus" value="-" onclick="minus(0);"><input type="text" name="amount" value="1"><input type="button" name="plus" value="+" onclick="plus(0);"></li>
+            <li>
+                <input type="button" name="minus" value="-" onclick="minus(0);">
+                <input type="text" name="amount" value="1"  onchange="setAmount(0,this)">
+                <input type="button" name="plus" value="+" onclick="plus(0);">
+            </li>
             <li id="price0">¥21.90</li>
-            <li><p  onclick="collection();">移入收藏</p><p onclick="del(this);">删除</p></li>
+            <li>
+                <p  onclick="collection();">移入收藏</p>
+                <p onclick="del(this);">删除</p>
+            </li>
         </ul>
         <ul>
             <li><img src="images/mai.jpg"></li>
             <li>灰霾来了怎么办</li>
             <li>¥<input type="text" name="price" value="24.00"></li>
-            <li><input type="button" name="minus" value="-" onclick="minus(1);"><input type="text" name="amount" value="1"><input type="button" name="plus" value="+" onclick="plus(1);"></li>
+            <li>
+                <input type="button" name="minus" value="-" onclick="minus(1);">
+                <input type="text" name="amount" value="1" onchange="setAmount(1,this)">
+                <input type="button" name="plus" value="+" onclick="plus(1);">
+            </li>
             <li id="price1">¥24.00</li>
-            <li><p  onclick="collection();">移入收藏</p><p onclick="del(this);">删除</p></li>
+            <li>
+                <p  onclick="collection();">移入收藏</p>
+                <p onclick="del(this);">删除</p>
+            </li>
         </ul>
         <ol>
             <li id="totalPrice">商品总计：<span></span></li>
-            <li><span>结 算</span></li>
+            <li><span onclick="accounts()">结 算</span></li>
         </ol>
     </div>
 </div>
-<script type="text/javascript" src="js/shopping.js"></script>
+<script>
+    function close_plan() {
+        window.close();
+    }
+    function collection() {
+        if (confirm("移入收藏后，将不再购物车显示，是否继续操作?")) alert("移入收藏成功！！！")
+    }
+    function del(t) {
+        // console.log(t)
+        t.parentNode.parentNode.parentNode.removeChild(t.parentNode.parentNode)
+        totalPrice()
+    }
+    function minus(num) {
+        let price = document.getElementsByName("price")[num].value;
+        let amount = document.getElementsByName("amount")[num].value;
+        if (amount<=1)  alert("不能再减了")
+        else {
+            amount--;
+            document.getElementsByName("amount")[num].value=amount;
+            document.getElementById("price"+num).innerHTML="¥"+(price*amount).toFixed(2)
+        }
+        totalPrice()
+    }
+    function plus(num) {
+        // console.log(num)
+        let price = document.getElementsByName("price")[num].value;
+        let amount = document.getElementsByName("amount")[num].value
+        amount++;
+        document.getElementsByName("amount")[num].value=amount;
+        document.getElementById("price"+num).innerHTML="¥"+(price*amount).toFixed(2)
+        totalPrice()
+    }
+    function setAmount(num,_this) {
+        // console.log(_this.value)
+        document.getElementsByName("amount")[num].value=_this.value
+        countPrice(num)
+    }
+    function countPrice(num) {
+        let price = document.getElementsByName("price")[num].value;
+        let amount = document.getElementsByName("amount")[num].value
+        document.getElementsByName("amount")[num].value=amount;
+        document.getElementById("price"+num).innerHTML="¥"+(price*amount).toFixed(2)
+        totalPrice()
+    }
+    function totalPrice() {
+        let price = document.getElementsByName("price")
+        let amount = document.getElementsByName("amount")
+        let sum = 0;
+        for (let i = 0; i < price.length; i++) {
+            sum += price[i].value * amount[i].value
+        }
+        document.getElementById("totalPrice").childNodes[1].innerHTML="¥"+sum.toFixed(2);
+    }
+    totalPrice()
+
+    function accounts() {
+        let str="您本次购买的商品信息如下：\n商品名称：\n"
+        let price = document.getElementsByName("price")
+        // console.log(price[0].parentNode.parentNode.childNodes[3].innerHTML)
+        for (let i=0;i<price.length; i++) {
+            str += price[i].parentNode.parentNode.childNodes[3].innerHTML + "\n"
+        }
+        str += "商品数量："
+        // console.log(price[0].parentNode.parentNode.childNodes[7].childNodes[3].value)
+        let c=0;
+        for (let i=0;i<price.length; i++) {
+            c+=parseInt(price[i].parentNode.parentNode.childNodes[7].childNodes[3].value)
+        }
+        str += c + "件；\n"
+        str+="商品总计："
+        let amount = document.getElementsByName("amount")
+        let sum = 0;
+        for (let i = 0; i < price.length; i++) {
+            sum += price[i].value * amount[i].value
+        }
+        str += sum+"元；运费：0元；\n请确认以上信息是否有误！！！"
+        confirm(str)? alert("提交成功"):console.log("");
+    }
+</script>
 </body>
 </html>

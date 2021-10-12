@@ -34,9 +34,14 @@
 <script type="text/javascript" src="js/shopping.js"></script>
 <script type="text/javascript">
     function accounts(){
-        
-
-
+        let num1 = document.getElementById("cartList").firstElementChild.firstElementChild.nextSibling.nextSibling.firstChild.nextSibling.value;
+        let num2 = document.getElementById("cartList").firstElementChild.nextElementSibling.firstElementChild.nextSibling.nextSibling.firstChild.nextSibling.value;
+        let total = document.getElementById("cartList").lastElementChild.firstElementChild.innerHTML;
+        console.log(num1)
+        console.log(num2)
+        console.log(total)
+        var str="您本次购买的商品信息如下：<br/>白岩松：白说："+num1+"<br/>岛上书店："+num2+"<br/>商品共计："+total;
+        document.getElementById("cartList").nextElementSibling.innerHTML=str;
     }
 </script>
 </body>
