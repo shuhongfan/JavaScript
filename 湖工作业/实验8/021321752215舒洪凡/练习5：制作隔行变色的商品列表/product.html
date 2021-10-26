@@ -59,9 +59,9 @@
  </body>
  <script src="js/jquery-1.12.4.js"></script>
  <script>
-	$(document).ready(function(){
-		$(".contain tr:not(.t-head):even").css("background","#eff7d1");
-		$(".contain tr:not(.t-head):odd").css("background","#f7e195");
-	});
+	$(function() {
+	    $('.contain tr:gt(0).even').css("background","#eff7d1")
+	    $('.contain tr:gt(0).odd').css("background","#f7e195")
+	})
  </script>
 </html>
